@@ -1,6 +1,7 @@
 <?php
 
-error_reporting(0);
+// disable this in production mode
+error_reporting(1);
 
 $connection = mysqli_connect('localhost', 'root', '', 'sankalan_chakra_2k16');
 if (!$connection)
