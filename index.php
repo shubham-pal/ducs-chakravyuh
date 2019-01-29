@@ -254,12 +254,14 @@ if ($timerData['status'] == 1) {
 
         <script>
             window.fbAsyncInit = function () {
-                FB.init({
-                    appId: '810398922673660',
-                    cookie: true,
-                    status: true,
-                    xfbml: true,
-                    version: 'v2.5'
+                $.getJSON("./js/appId.json", function(json) {
+                    FB.init({
+                        appId: json["sahil"],
+                        cookie: true,
+                        status: true,
+                        xfbml: true,
+                        version: 'v2.5'
+                    });
                 });
             };
 

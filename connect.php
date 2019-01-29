@@ -7,6 +7,8 @@ $connection = mysqli_connect('localhost', 'root', '', 'sankalan_chakra_2k16');
 if (!$connection)
 {
     echo('ERROR_CONNECTION_FAILURE');
+}else{
+	echo('Connected');
 }
 
 ?>
