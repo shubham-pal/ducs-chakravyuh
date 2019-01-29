@@ -255,7 +255,7 @@ if ($timerData['status'] == 1) {
         <script>
             window.fbAsyncInit = function () {
                 FB.init({
-                    appId: '1866944093534607',
+                    appId: '810398922673660',
                     cookie: true,
                     status: true,
                     xfbml: true,
