@@ -1,0 +1,486 @@
+/* Preloader */
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f2f3f7;
+    /* change if the mask should have another color then white */
+    z-index: 9999999;
+    /* makes sure it stays on top */
+}
+
+#status {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    /* centers the loading animation horizontally one the screen */
+    top: 50%;
+    /* centers the loading animation vertically one the screen */
+    background-image: url(../img/status.gif);
+    /* path to your loading animation */
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: -100px 0 0 -100px;
+    /* is width and height divided by two */
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #8a8b8b;
+    font-size: 18px;
+    line-height: 22px;
+    /* background-color: rgba(53, 10, 4, 0.9); */
+    background-color: rgb(37, 43, 50);
+    background-size: cover;
+    background-repeat: repeat;
+    font-weight: normal;
+}
+
+#facebook-login-button {
+    border-radius: 15px;
+    border-style: solid;
+    border-color: #131E35;
+    cursor: pointer;
+}
+
+.bg-overlay {
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+body.yellow {
+    background-color: #ffcc00;
+}
+
+body.green {
+    background-color: #aaee06;
+}
+
+body.blue {
+    background-color: #00d2ff;
+}
+
+.headingIndex {
+    margin: 0;
+    padding: 0;
+}
+
+.main-wrapper {
+    padding: 40px 20px 0 20px;
+    margin: 0 auto;
+}
+
+
+/*Logo Start Here*/
+
+#logo {
+    text-align: center;
+    margin: 0 0 30px 0;
+    padding: 0;
+}
+
+#logo a {
+    display: inline-block;
+    padding: 4px;
+}
+
+
+/*Logo End Here*/
+
+
+/*Slogan start here*/
+
+.slogan {
+    margin-bottom: 76px;
+    text-align: center;
+}
+
+.slogan h1 {
+    color: #fff;
+}
+
+.slogan p {
+    margin: 10px 0;
+    padding: 0;
+    color: #3e3d3d;
+}
+
+
+/*SLogan end here*/
+
+
+/*Countdown start here*/
+
+.count-down {
+    margin: 0 0 85px 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    height: 240px;
+    height: auto;
+}
+
+.count-down li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 28px;
+    display: inline-block;
+    min-height: 250px;
+}
+
+.count-down li div {
+    margin: 0 !important;
+    padding: 0;
+}
+
+.count-down li input {
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 88px!important;
+    width: 154px!important;
+    height: 98px!important;
+    margin: 70px 0 0 -210px !important;
+    font-weight: normal!important;
+}
+
+#days-title,
+#hours-title,
+#mins-title,
+#secs-title {
+    display: block;
+    text-transform: uppercase;
+    margin-top: -94px;
+    font-size: 24px;
+    position: relative;
+    z-index: 9 !important;
+}
+
+
+/*Countdown end here*/
+
+
+/*Social Links start here*/
+
+.connect-us {
+    padding: 0;
+    text-align: center;
+}
+
+.connect-us li {
+    display: inline-block;
+    font-size: 28px;
+}
+
+.connect-us li a {
+    display: block;
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+    line-height: 36px;
+    color: #fff;
+}
+
+.connect-us li a.fb:hover {
+    color: #507cbe;
+}
+
+.connect-us li a.twitter:hover {
+    color: #62cdf2;
+}
+
+.connect-us li a.gplus:hover {
+    color: #ec5d48;
+}
+
+.connect-us li a.linkedin:hover {
+    color: #1e88c9;
+}
+
+.connect-us li a.ytube:hover {
+    color: #e64c38;
+}
+
+.connect-us li a.dribbble:hover {
+    color: #d34e95;
+}
+
+.connect-us li a.pinterest:hover {
+    color: #e94546;
+}
+
+
+/*Social Links end here*/
+
+
+/*Footer start here*/
+
+footer {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.footer-text {
+    font-size: 14px;
+}
+
+footer a {
+    color: #8a8b8b;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: #8a8b8b;
+}
+
+
+/*Footer end here*/
+
+
+/*Rules/Contact css start here*/
+
+.about-us a,
+.contact-us a,
+.index-leaderboard a {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: #ff3b30;
+    border-radius: 50%;
+    color: #ffffff;
+    text-align: center;
+    line-height: 40px;
+    font-size: 22px;
+    z-index: 999;
+    outline: none;
+    left: 1vw;
+}
+
+.about-us a {
+    top: 50%;
+}
+
+.about-us .tooltip-inner,
+.contact-us .tooltip-inner,
+.index-leaderboard .tooltip-inner {
+    background: none;
+    border-radius: 0;
+    /*    color: #3e3d3d;*/
+    color: dodgerblue;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 0;
+}
+
+.about-us .tooltip-arrow,
+.contact-us .tooltip-arrow,
+.index-leaderboard .tooltip-arrow {
+    display: none;
+}
+
+.contact-us a {
+    top: 40%;
+}
+
+.index-leaderboard a {
+    top: 60%;
+}
+
+.about-us a:hover,
+.contact-us a:hover,
+.index-leaderboard a {
+    text-decoration: none;
+}
+
+.chkRules ol {
+    text-align: left;
+}
+
+.chkRules ol li {
+    margin-bottom: 1em;
+}
+
+
+/*Rules/Contact css end here*/
+
+.ux .modal {
+    background: rgba(31, 31, 31, 0.96);
+    padding: 0;
+}
+
+.pop-up {
+    padding: 20px;
+    border-radius: 0;
+    box-shadow: none;
+    background: none;
+    border: none;
+}
+
+.cls-pop {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 30px;
+    line-height: 40px;
+    color: #ffffff;
+    font-weight: normal;
+    z-index: 999;
+}
+
+.cls-pop:hover {
+    color: #ff382e;
+    text-decoration: none;
+}
+
+.pop-up h3 {
+    font-size: 34px;
+    line-height: 40px;
+    margin: 0 0 60px 0;
+    padding: 0;
+    color: #ff382e;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.pop-up h3:before {
+    background-color: #ff382e;
+    bottom: -30px;
+    content: "";
+    display: block;
+    height: 1px;
+    position: absolute;
+    width: 300px;
+}
+
+.pop-up h3:before {
+    left: 50%;
+    margin-left: -150px;
+}
+
+.pop-up p {
+    margin: 10px 0;
+    padding: 0;
+    font-size: 15px;
+    line-height: 24px;
+    color: #dadada;
+}
+
+.pop-up-cnt {
+    text-align: center;
+}
+
+.pop-up-cnt i {
+    height: 40px;
+    width: 40px;
+    background-color: #ff3b30;
+    border-radius: 50%;
+    color: #ffffff;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+
+.pop-up-cnt h4 {
+    font-size: 22px;
+    line-height: 28px;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+}
+
+.pop-up-cnt .cnt-wrap {
+    padding-top: 30px;
+}
+
+.features {
+    margin: 20px 0 0 0;
+    padding: 0 0 0 14px;
+}
+
+.features li {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 28px;
+    color: #dadada;
+    width: 33%;
+    float: left;
+}
+
+.gmap {
+    margin: 20px 0;
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+
+/*
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    .count-down li input {
+        margin-top: 60px !important;
+    }
+}
+*/
+
+
+/*Responsive css start here*/
+
+@media only screen and (max-width: 1200px) {
+    .count-down li div,
+    .count-down li canvas {
+        width: 230px !important;
+        height: 230px !important;
+    }
+    .contact-form input {
+        padding: 0 26% 0 17%;
+    }
+    .count-down li input {
+        margin: 36px 0 0 -187px !important;
+    }
+    .hide-med {
+        display: none !important;
+    }
+    .contact-form .btn-submit {
+        font-size: 18px;
+    }
+    .features li {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-device-width: 600px) {
+    .features li {
+        width: 100%;
+        float: none;
+    }
+}
+
+@media only screen and (max-device-width: 600px) {
+    .about-us a,
+    .contact-us a,
+    .index-leaderboard a {
+        top: 0;
+        /*        top: 55%;*/
+    }
+    .contact-us a {
+        left: 90vw;
+    }
+    .index-leaderboard a {
+        left: 47vw;
+    }
+}
+
+
+/*Responsive css end here*/

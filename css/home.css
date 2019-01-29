@@ -1,0 +1,144 @@
+.colorRed {
+    color: red;
+}
+
+.colorGreen {
+    color: green;
+}
+
+#correct {
+    /*    border: 1px solid green;*/
+    /*    vertical-align: middle;*/
+    color: #458245;
+    margin-left: 0.3em;
+    display: none;
+}
+
+.reply {
+    font-size: 4em;
+}
+
+#incorrect {
+    /*    border: 1px solid red;*/
+    color: #AD2A2A;
+    display: none;
+}
+
+.link--yaku {
+    color: #2C3E50;
+}
+
+.link--yaku:hover span {
+    color: #1e1a1b;
+}
+
+.chkRules ol {
+    text-align: left;
+    font-family: Montserrat;
+}
+
+.chkRules ol li {
+    margin-bottom: 1em;
+}
+
+.ques button {
+    width: 100%;
+}
+
+.ques img,
+.ques video {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.hintTable {
+    font-size: 2em;
+    text-align: center;
+}
+
+#refresh-hints,
+#refresh-leaderboard {
+    position: relative;
+    left: 20%;
+    cursor: pointer;
+}
+
+.hinth2 {
+    position: relative;
+    left: 2%;
+}
+
+.ldrbrdh2 {
+    position: relative;
+    right: -2.5%
+}
+
+.leaderboardTable thead tr:nth-child(1) {
+    background-color: #18BC9C;
+    /*    border-radius: 5px;
+margin-bottom: 5px;*/
+}
+
+.leaderboardTable thead th {
+    text-align: center;
+}
+
+.currRow {
+    font-family: Montserrat;
+}
+
+.currRow th:first-child,
+.leaderboardTable td:first-child {
+    vertical-align: middle;
+}
+
+.currRow th:nth-child(3),
+.leaderboardTable td:nth-child(3) {
+    vertical-align: middle;
+}
+
+.currRow th:nth-child(4),
+.leaderboardTable td:nth-child(4) {
+    vertical-align: middle;
+}
+
+.currRow th:nth-child(5),
+.leaderboardTable td:nth-child(5) {
+    vertical-align: middle;
+}
+
+.currRow th:nth-child(6),
+.leaderboardTable td:nth-child(6) {
+    vertical-align: middle;
+}
+
+@media(max-width:767px) {
+    #refresh-leaderboard {
+        left: 5%;
+    }
+}
+
+@media(max-width:600px) {
+    #correct {
+        margin-left: 0;
+    }
+}
+
+@media(max-width:425px) {
+    #refresh-leaderboard {
+        /*        position: relative;*/
+        left: -3%;
+    }
+}
+
+@media(max-width:375px) {
+    .ldrbrdh2 {
+        font-size: 2.7em;
+    }
+}
+
+@media(max-width:320px) {
+    .ldrbrdh2 {
+        font-size: 2.5em;
+    }
+}
