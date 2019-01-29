@@ -470,9 +470,8 @@ if ($userStatus != null) {
 
                     default:
 
-                        // todo - initially it was this - be sure only after production mode testing
-                        // var quesObj = JSON.Parse(response);
-                        var quesObj = response;
+                        var quesObj = JSON.parse(response);
+                        // var quesObj = response;
                         $('#level-number').text(quesObj['level']);
 
                         switch (quesObj['type']) {

@@ -14,10 +14,11 @@ we need to rebuild / recode these
 
 ## Secrets
 
-md5 hashing is used.
+- md5 hashing is used.
 
 ## todo
 
+- jquery issue i think. Animations and live load & hints not working.
 - give the admin ssh access / mysql workbench access to monitor the db live
 - md5 hasher.php for hints and answer i.e. to populate them
 - go through everything in dev mode

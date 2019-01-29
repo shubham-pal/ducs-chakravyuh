@@ -256,7 +256,7 @@ if ($timerData['status'] == 1) {
             window.fbAsyncInit = function () {
                 $.getJSON("./js/appId.json", function(json) {
                     FB.init({
-                        appId: json["sahil"],
+                        appId: json["jatin"],
                         cookie: true,
                         status: true,
                         xfbml: true,
