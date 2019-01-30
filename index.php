@@ -11,6 +11,7 @@ if ($timerData['status'] == 1) {
 
         header('Location: home.php');
     }
+    $conf = parse_ini_file('app.ini.php');
 }
 
 ?>
@@ -253,31 +254,31 @@ if ($timerData['status'] == 1) {
         <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 
         <script>
-            window.fbAsyncInit = function () {
-                $.getJSON("./js/appId.json", function(json) {
-                    FB.init({
-                        appId: json["jatin"],
-                        cookie: true,
-                        status: true,
-                        xfbml: true,
-                        version: 'v2.5'
-                    });
-                });
-            };
+            // window.fbAsyncInit = function () {
+            //     $.getJSON("./js/appId.json", function(json) {
+            //         FB.init({
+            //             appId: json["jatin"],
+            //             cookie: true,
+            //             status: true,
+            //             xfbml: true,
+            //             version: 'v2.5'
+            //         });
+            //     });
+            // };
 
-            (function (d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) {
-                    return;
-                }
-                js = d.createElement(s);
-                js.id = id;
-                js.src = "./js/sdk.js";
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
+              (function(d, s, id){
+                 var js, fjs = d.getElementsByTagName(s)[0];
+                 if (d.getElementById(id)) {return;}
+                 js = d.createElement(s); js.id = id;
+                 js.src = "https://connect.facebook.net/en_US/sdk.js";
+                 fjs.parentNode.insertBefore(js, fjs);
+               }(document, 'script', 'facebook-jssdk'));
 
             function handleLoginStatus(response) {
                 if (response.status === 'connected') {
+                    
+                    // api work
+
                     FB.api('/me?fields=id,name,email,picture{url}', function (response) {
                         $.ajax({
                             type: 'POST',
@@ -287,7 +288,7 @@ if ($timerData['status'] == 1) {
                                 if (msg == 1) {
                                     // Success.
                                     $('#login-success').show(300);
-
+                                    // redirection
                                     setTimeout(function () {
                                         window.location = 'home.php';
                                     }, 1000);
@@ -307,6 +308,9 @@ if ($timerData['status'] == 1) {
                             }
                         });
                     });
+
+                    // api work done
+
                 } else if (response.status === 'not_authorized') {
                     $('#login-error').html('<strong>Oops!</strong> Please log into the app to continue.').show(300);
                 } else {
@@ -322,11 +326,24 @@ if ($timerData['status'] == 1) {
                         FB.login(function (response) {
                             handleLoginStatus(response);
                         }, {
-                            scope: 'public_profile,email'
+                            scope: 'public_profile, email'
                         });
                     }
                 });
             }
+
+            window.fbAsyncInit = function() {
+                FB.init({
+
+                  appId      : <?php echo "'" . $conf['j_appid'] . "'" ?>, 
+                  cookie     : true,
+                  xfbml      : true,
+                  version    : 'v3.2'
+                });
+                  
+                FB.AppEvents.logPageView();   
+                  
+              };
         </script>
 
         <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>

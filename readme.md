@@ -14,7 +14,8 @@ we need to rebuild / recode these
 
 ## Secrets
 
-- md5 hashing is used.
+- md5 hashing is used. MAYBE BASE64 encoding.
+- for hints base64 decode is used. be careful. we do not know what where is used. ask suyash maybe
 
 ## todo
 

@@ -3,10 +3,10 @@
 date_default_timezone_set('Asia/Calcutta');
 
 // Event start time.
-$startTime = mktime(0, 0, 0, 1, 22, 2019);
+$startTime = mktime(0, 0, 0, 1, 28, 2019);
 
 // Event end time.
-$endTime = mktime(0, 0, 0, 1, 25, 2019);
+$endTime = mktime(0, 0, 0, 2, 5, 2019);
 
 // Current time.
 $currTime = time();
