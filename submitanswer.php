@@ -27,16 +27,15 @@ if ($userStatus != null) {
 $value = mysqli_real_escape_string($connection, htmlentities($_POST['value']));
 $value = strtolower($value);
 $value = preg_replace('/\s+/', '', $value);
-echo "received value is " . $value;
+//echo "received value is " . $value;
 $tmpAttempt = $value;
 // $value = md5($value);
 // todo - activate md5 in production
 
 $query = sprintf("SELECT level FROM user WHERE id = '%s'", $_SESSION['id']);
-echo $query;
+//echo $query;
 $result = mysqli_query($connection, $query);
 // var_dump($result);
-print_r($result);
 
 if (!$result) {
 	exit('ERROR_SUBMITTING_ANSWER');
@@ -49,27 +48,27 @@ if ($userLevel['level'] > 50) {
 }
 
 $query = sprintf("SELECT answer FROM question WHERE id = '%s'", $userLevel['level']);
-echo $query;
+//echo $query;
 $result = mysqli_query($connection, $query);
 if (!$result) {
 	exit('ERROR_SUBMITTING_ANSWER');
 }
 
 $userRow = mysqli_fetch_array($result);
-echo "\nmocha - 1\n";
-echo($value);
-echo "\nmocha - 2\n";
-print_r($userRow);
-echo "\nmocha - 3\n";
-echo $userRow["answer"];
-echo "\nmocha - 4\n";
+// echo "\nmocha - 1\n";
+// echo($value);
+// echo "\nmocha - 2\n";
+// print_r($userRow);
+// echo "\nmocha - 3\n";
+// echo $userRow["answer"];
+// echo "\nmocha - 4\n";
 if ($value != $userRow['answer']) {
 	// Incorrect answer.
 
 	$query = sprintf("SELECT last_five_attempts FROM userattempt WHERE user_id = '%s' AND level = '%s'", $_SESSION['id'], $userLevel['level']);
 	$result = mysqli_query($connection, $query);
 	// var_dump($result);
-	print_r($result);
+	// print_r($result);
 
 	if (!$result) {
 		exit('INCORRECT_ANSWER');
@@ -83,7 +82,7 @@ if ($value != $userRow['answer']) {
 
 		$attempts = $attemptsRow['last_five_attempts'];
 		$attemptsArray = explode('||', $attempts);
-		if (count($attemptsArray) == 5) {
+		if (count($attemptsArray) == 12) {
 			// Five attempts already present.
 
 			// Remove the 1st element.

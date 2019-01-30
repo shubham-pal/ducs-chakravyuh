@@ -402,7 +402,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`id`, `name`, `email`, `picture_url`, `blocked`, `level`, `points`, `level_update_time`, `level_update_time_micro`, `last_hint_time`, `next_hint`) VALUES
-(2699061193462, 'Yogesh Patil', 'ye_patil@yahoo.com', 'https%3A%2F%2Ffbcdn-profile-a.akamaihd.net%2Fhprofile-ak-xal1%2Fv%2Ft1.0-1%2Fc8.0.50.50%2Fp50x50%2F10359403_2526895129418_6532368325717079666_n.jpg%3Foh%3De5f23333214ea048da4d2e94fbd0b2c6%26oe%3D57711DBA%26__gda__%3D1466409448_830ab9486c62764d94d645d0de73250d', b'0', 51, 429, '2016-02-21 23:05:35', 1456076135.76, '2016-02-21 23:05:35', 1),
+(2699061193462, 'Yogesh Patil', 'ye_patil@yahoo.com', 'https%3A%2F%2Ffbcdn-profile-a.akamaihd.net%2Fhprofile-ak-xal1%2Fv%2Ft1.0-1%2Fc8.0.50.50%2Fp50x50%2F10359403_2526895129418_6532368325717079666_n.jpg%3Foh%3De5f23333214ea048da4d2e94fbd0b2c6%26oe%3D57711DBA%26__gda__%3D1466409448_830ab9486c62764d94d645d0de73250d', b'0', 51, 429, '2016-02-21 23:05:35', 1456076135.76, '2016-02-21 23:05:35', 1);
 
 -- --------------------------------------------------------
 
@@ -424,7 +424,7 @@ CREATE TABLE IF NOT EXISTS `userattempt` (
 
 INSERT INTO `userattempt` (`user_id`, `level`, `count`, `last_five_attempts`) VALUES
 (2699061193462, 1, 1, 'chakravyuh'),
-(2699061193462, 2, 18, 'babulsupriyo||babulsupriyabaral||babulsupriyabaral||mukundpur-shivvihar||mukundpurshivvihar'),
+(2699061193462, 2, 18, 'babulsupriyo||babulsupriyabaral||babulsupriyabaral||mukundpur-shivvihar||mukundpurshivvihar');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

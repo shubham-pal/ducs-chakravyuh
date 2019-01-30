@@ -127,13 +127,13 @@ if ($userStatus != null) {
                 </div>
             </div>
             <!--Countdown-->
-            <div id="countdown" class=".col-sm-4"></div>
+            <!-- <div id="countdown" class=".col-sm-4"></div> -->
             <!--Countdown-->
             <!--            <div class="container">-->
             <!--            <div class="row">-->
             <div class="col-sm-4 reply text-center">
                 <!--                    <img class="img-responsive" src="reply/yes.png" alt="incorrect">-->
-                <i class="fa fa-thumbs-down text-center fa-5x" id="incorrect"></i>
+                <i class="fa fa-thumbs-down text-center fa-3x" id="incorrect"></i>
             </div>
 
             <div class="col-sm-4 portfolio-item ques">
@@ -179,7 +179,7 @@ if ($userStatus != null) {
 
             <div class="col-sm-4 reply text-center">
                 <!--                    <img class="img-responsive" src="reply/no.jpg" alt="correct" </div>-->
-                <i class="fa fa-thumbs-up fa-5x" id="correct"></i>
+                <i class="fa fa-thumbs-up fa-3x" id="correct"></i>
             </div>
     </section>
 
@@ -213,7 +213,7 @@ if ($userStatus != null) {
                     <hr class="star-primary">
                 </div>
             </div>
-            <div class="row">
+            <div class="row">   
                 <div class="table-responsive col-lg-12">
                     <table class="table table-hover leaderboardTable table-condensed text-center">
                         <thead>
@@ -390,7 +390,8 @@ if ($userStatus != null) {
             url: 'submitanswer.php',
             data: 'value=' + value,
             success: function(response) {
-                switch (response) {
+                
+                switch (response.trim()) {
                     case 'USER_BLOCKED':
                     case 'THE GAME HAS ENDED':
                     case 'USER_NOT_LOGGED_IN':
@@ -508,7 +509,6 @@ if ($userStatus != null) {
             type: 'GET',
             url: 'gethint.php',
             success: function(response) {
-
                 switch (response) {
                     case 'USER_BLOCKED':
                     case 'THE GAME HAS ENDED':
@@ -528,7 +528,6 @@ if ($userStatus != null) {
                     default:
                         // Remove previous hints.
                         clearHints();
-
                         var obj = JSON.parse(response);
                         var tbody = $('#hint table > tbody');
                         var i;

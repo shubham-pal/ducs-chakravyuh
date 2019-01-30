@@ -42,7 +42,7 @@ if (!$resultGetAllPrevHints) {
 
 if (mysqli_num_rows($resultGetAllPrevHints) > 0) {
 	while ($hints = mysqli_fetch_array($resultGetAllPrevHints)) {
-		array_push($hintsData, base64_decode($hints["data"]));
+		array_push($hintsData, $hints["data"]);
 	}
 }
 
@@ -96,7 +96,7 @@ while (true) {
 
 		if (mysqli_num_rows($resultGetHint) > 0) {
 			$hint = mysqli_fetch_array($resultGetHint);
-			array_push($hintsData, base64_decode($hint["data"]));
+			array_push($hintsData, $hint["data"]);
 
 			$nextHintDateTime = date("Y-m-d H:i:s", $nextHintTime);
 			$nextHintNumber = $participant["next_hint"] + 1;
@@ -122,8 +122,3 @@ while (true) {
 echo json_encode($hintsData);
 
 ?>
-
-
-<!-- 
-todo : THIS FILE IS GENERATING SOME STRAY CHARACTER - WHEN EMPTY RESPONSE GOING. THIS IS CAUSING HINTS TO NOT LOAD 
--->
