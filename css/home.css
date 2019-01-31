@@ -28,11 +28,14 @@
 }
 
 .link--yaku {
-    color: #2C3E50;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: #424242;
+    color: #1eabcb;
 }
 
 .link--yaku:hover span {
-    color: #1e1a1b;
+    color: #000000;
 }
 
 .chkRules ol {
