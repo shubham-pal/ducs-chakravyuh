@@ -1,7 +1,11 @@
 ;<?php die(); ?>
 
 ; 0 means production mode, 1 mean dev mode
-devmode = 0
+; all good and working in both modes
+; remember that, dev mode needs plaintext in db
+; and prod mode needs md5 hash and base64 encoding in db
+; only then they will work
+devmode = 1
 
 [IN USE]
 appid = 810398922673660

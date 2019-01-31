@@ -319,6 +319,7 @@ if ($timerData['status'] == 1) {
             }
 
             function loginWithFacebook() {
+                // todo
                 // FB.getLoginStatus(function (response) {
                 //     console.log(response);
                 //     if (response.status === 'connected') {

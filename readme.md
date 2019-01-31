@@ -1,5 +1,7 @@
 # chakravyuh
 
+Please refer [app.ini](./app.ini.php) before moving forward.
+
 ## todo
 
 - [x] These 3 files were in gitignore we need to rebuild / recode these

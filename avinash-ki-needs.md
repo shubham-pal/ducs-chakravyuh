@@ -17,7 +17,7 @@
 - user block karna hai
 - UI new
 - documentation
-- [X] thumbs up -> should not affect dom 
-- [X] 12 attemps visible - done
+- [x] thumbs up -> should not affect dom
+- [x] 12 attemps visible - done
 
-- hint-> itni minute baad    
+- hint-> itni minute baad

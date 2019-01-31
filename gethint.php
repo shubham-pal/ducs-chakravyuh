@@ -1,6 +1,4 @@
 <?php
-// md5 works in prod
-// todo : hint work for 1st time, not after that, idk why
 
 require 'timer.php';
 if ($timerData['status'] != 1) {
@@ -21,7 +19,7 @@ function get_next_hint_time($level, $nextHintNumber, $lastHintTime)
 	$currTime = time();
 
 	if ($level <= 20) {
-		$nextHintTime = (5 * 1) + ($nextHintNumber * 1 * 1) + strtotime($lastHintTime);
+		$nextHintTime = (5 * 60) + ($nextHintNumber * 1 * 60) + strtotime($lastHintTime);
 	} else {
 		$nextHintTime = (10 * 60) + ($nextHintNumber * 2 * 60) + strtotime($lastHintTime);
 	}
@@ -46,14 +44,10 @@ if (!$resultGetAllPrevHints) {
 
 if (mysqli_num_rows($resultGetAllPrevHints) > 0) {
 	while ($hints = mysqli_fetch_array($resultGetAllPrevHints)) {
-		if($conf["devmode"] == 1){
-			// echo "W";
-			// print_r($hint["data"]);
-			array_push($hintsData,  $hint["data"]);
-		}
-		else{
-			// print_r($hint["data"]);
-			array_push($hintsData,  base64_decode($hint["data"]));
+		if ($conf["devmode"] == 1) {
+			array_push($hintsData, $hints["data"]);
+		} else {
+			array_push($hintsData, base64_decode($hints["data"]));
 		}
 	}
 }
@@ -108,16 +102,12 @@ while (true) {
 
 		if (mysqli_num_rows($resultGetHint) > 0) {
 			$hint = mysqli_fetch_array($resultGetHint);
-			if($conf["devmode"] == 1){
-				// 	echo "W";
-				// print_r($hint["data"]);
-				array_push($hintsData,  $hint["data"]);
+			if ($conf["devmode"] == 1) {
+				array_push($hintsData, $hint["data"]);
+			} else {
+				array_push($hintsData, base64_decode($hint["data"]));
 			}
-			else{
-				// print_r($hint["data"]);
-				array_push($hintsData,  base64_decode($hint["data"]));
-			}
-		
+
 			$nextHintDateTime = date("Y-m-d H:i:s", $nextHintTime);
 			$nextHintNumber = $participant["next_hint"] + 1;
 			//Update new hint number and last hint time of user as calculated by algorithm

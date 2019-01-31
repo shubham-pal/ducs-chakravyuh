@@ -2,11 +2,10 @@
 
 session_start();
 
-$userStatus = NULL;
+$userStatus = null;
 
 // Check if logged in.
-if (!isset($_SESSION['id']))
-{
+if (!isset($_SESSION['id'])) {
 	$userStatus = 'USER_NOT_LOGGED_IN';
 	session_destroy();
 	return;
@@ -17,8 +16,7 @@ require 'connect.php';
 // Check if the user is blocked or not registered anymore.
 $query = sprintf("SELECT blocked FROM user WHERE id = '%s'", $_SESSION['id']);
 $result = mysqli_query($connection, $query);
-if (!$result)
-{
+if (!$result) {
 	$userStatus = 'USER_STATUS_UNREACHABLE';
 	$_SESSION = array();
 	session_destroy();
@@ -26,8 +24,7 @@ if (!$result)
 }
 
 $tmpCount = mysqli_num_rows($result);
-if ($tmpCount == 0)
-{
+if ($tmpCount == 0) {
 	// User not registered anymore.
 	$userStatus = 'USER_BLOCKED';
 	$_SESSION = array();
@@ -36,8 +33,7 @@ if ($tmpCount == 0)
 }
 
 $userRow = mysqli_fetch_array($result);
-if ($userRow['blocked'] == 1)
-{
+if ($userRow['blocked'] == 1) {
 	// Logout the user.
 	$userStatus = 'USER_BLOCKED';
 	$_SESSION = array();
