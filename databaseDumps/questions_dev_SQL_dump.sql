@@ -68,15 +68,15 @@
     
 
 INSERT INTO `hint` (`ques_id`, `hint_number`, `data`) VALUES 
-(1, 1, 'aGludDE='), 
-(1, 2, 'aGludDI='), 
-(2, 1, 'aGludDM='), 
-(2, 2, 'aGludDQ='), 
-(3, 1, 'aGludDU='), 
-(4, 1, 'aGludDY=');
+(1, 1, 'hint1'), 
+(1, 2, 'hint2'), 
+(2, 1, 'hint3'), 
+(2, 2, 'hint4'), 
+(3, 1, 'hint5'), 
+(4, 1, 'hint6');
 
 INSERT INTO `question` (`id`, `answer`, `data`, `type`) VALUES 
-(1, '9cdfb439c7876e703e307864c9167a15', 'hello' ,'text'), 
-(2, 'ebb7e099481958b192561052613d8386', './chakraData/myIMAGE.png' ,'image'), 
-(3, '902fbdd2b1df0c4f70b4a5d23525e932', './chakraData/myAUDIO.mp3' ,'audio'), 
-(4, '153495edec1b606c24947b1335998bd9', './chakraData/myVIDEOOKOK.mp4' ,'video');
+(1, 'lol', 'hello' ,'text'), 
+(2, 'whatisagodo', './chakraData/myIMAGE.png' ,'image'), 
+(3, 'ABC', './chakraData/myAUDIO.mp3' ,'audio'), 
+(4, 'Ava', './chakraData/myVIDEO.mp4' ,'video');
