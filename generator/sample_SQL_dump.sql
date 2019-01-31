@@ -31,7 +31,7 @@
     `name` varchar(100) NOT NULL,
     `email` varchar(50) NOT NULL,
     `picture_url` varchar(400) NOT NULL,
-    `blocked` bit(1) NOT NULL DEFAULT b'0',
+    `blocked` int(1) NOT NULL DEFAULT '0',
     `level` int(11) NOT NULL,
     `points` int(11) NOT NULL,
     `level_update_time` datetime NOT NULL,
