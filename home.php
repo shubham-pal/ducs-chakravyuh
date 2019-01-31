@@ -55,7 +55,7 @@ if ($userStatus != null) {
 <body id="page-top" class="index">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top" style="background-color: #252525;">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
@@ -235,7 +235,7 @@ if ($userStatus != null) {
 
     <!-- Footer -->
     <footer class="text-center">
-        <div class="footer-above">
+        <div class="footer-above" style="background-color: #252525;">
             <div class="container">
                 <div class="row">
                     <div class="footer-col col-md-4">
@@ -264,7 +264,7 @@ if ($userStatus != null) {
                 </div>
             </div>
         </div>
-        <div class="footer-below">
+        <div class="footer-below" style="background-color: #101010;">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
