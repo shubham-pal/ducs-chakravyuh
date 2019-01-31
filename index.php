@@ -319,29 +319,34 @@ if ($timerData['status'] == 1) {
             }
 
             function loginWithFacebook() {
-                FB.getLoginStatus(function (response) {
-                    if (response.status == 'connected') {
-                        handleLoginStatus(response);
-                    } else {
-                        FB.login(function (response) {
+                // FB.getLoginStatus(function (response) {
+                //     console.log(response);
+                //     if (response.status === 'connected') {
+                //         handleLoginStatus(response);
+                //     } else {
+                //         FB.login(function (response) {
+                //             handleLoginStatus(response);
+                //         }, {
+                //             scope: 'public_profile, email'
+                //         });
+                //     }
+                // }, true);
+                FB.login(function (response) {
                             handleLoginStatus(response);
                         }, {
                             scope: 'public_profile, email'
                         });
-                    }
-                });
             }
 
             window.fbAsyncInit = function() {
                 FB.init({
-
                   appId      : <?php echo "'" . $conf['appid'] . "'" ?>, 
                   cookie     : true,
                   xfbml      : true,
                   version    : 'v3.2'
                 });
-                  
-                FB.AppEvents.logPageView();   
+                
+                FB.AppEvents.logPageView();
                   
               };
         </script>
