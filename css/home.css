@@ -1,3 +1,6 @@
+.active > a{
+    background-color: #101010 !important;
+}
 .colorRed {
     color: red;
 }
@@ -74,7 +77,7 @@
 }
 
 .leaderboardTable thead tr:nth-child(1) {
-    background-color: #18BC9C;
+    background-color: #1eabcb;
     /*    border-radius: 5px;
 margin-bottom: 5px;*/
 }
