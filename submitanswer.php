@@ -29,6 +29,7 @@ $conf = parse_ini_file('app.ini.php');
 $value = mysqli_real_escape_string($connection, htmlentities($_POST['value']));
 $value = strtolower($value);
 $value = preg_replace('/\s+/', '', $value);
+$value = preg_replace('/[.-]+/', '', $value);
 //echo "received value is " . $value;
 $tmpAttempt = $value;
 

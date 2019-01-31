@@ -11,9 +11,8 @@ if ($timerData['status'] == 1) {
 
         header('Location: home.php');
     }
-    $conf = parse_ini_file('app.ini.php');
 }
-
+$conf = parse_ini_file('app.ini.php');
 ?>
 
     <!DOCTYPE html>

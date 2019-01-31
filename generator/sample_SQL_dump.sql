@@ -49,6 +49,18 @@
     PRIMARY KEY (`user_id`,`level`)
     ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+    CREATE TABLE `hint_time_control` (
+    `id` int(11) NOT NULL,
+    `LowerLevels_fixed_distance_from_last_hint` int(11) DEFAULT '5',
+    `LowerLevels_added_time_factor_based_on_hint_level` int(11) DEFAULT '1',
+    `partition_point_is_at_level` int(11) DEFAULT '20',
+    `UpperLevels_fixed_distance_from_last_hint` int(11) DEFAULT '10',
+    `UpperLevels_added_time_factor_based_on_hint_level` int(11) DEFAULT '2',
+    PRIMARY KEY (`id`)
+    ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+    INSERT INTO `hint_time_control` (`id`, `LowerLevels_fixed_distance_from_last_hint`, `LowerLevels_added_time_factor_based_on_hint_level`, `partition_point_is_at_level`, `UpperLevels_fixed_distance_from_last_hint`, `UpperLevels_added_time_factor_based_on_hint_level`) VALUES (1, 5, 1, 20, 10, 2);
+
     
 
     TRUNCATE TABLE `hint`;

@@ -5,14 +5,14 @@
 ; remember that, dev mode needs plaintext in db
 ; and prod mode needs md5 hash and base64 encoding in db
 ; only then they will work
-devmode = 1
+devmode = 0
 
 [IN USE]
 appid = 810398922673660
 
 server_name = "localhost"
 username = "root"
-db_name = "sankalan_chakra_2k16"
+old_db_name = "sankalan_chakra_2k16"
 pass = ""
 
 ; copy variables from below & paste above
@@ -21,7 +21,7 @@ pass = ""
 
 [change to be made]
 new_appid = "generate new from fb each year"
-new_db_name = "ducs_chakravyuh_mayajaal"
+db_name = "ducs_chakravyuh_mayajaal"
 
 [Jatin]
 j_appid = 810398922673660
