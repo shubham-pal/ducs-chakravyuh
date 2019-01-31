@@ -1,14 +1,19 @@
 <?php
 
-// disable this in production mode
-error_reporting(1);
-
 $conf = parse_ini_file('app.ini.php');
 
-$servername = "localhost";
-$username = "root";
-$password = $conf["s_pass"];
-$DB_NAME = "sankalan_chakra_2k16";
+if($conf["devmode"] == 1){
+    error_reporting(1);
+}
+else{
+    error_reporting(0);
+}
+
+
+$servername = $conf["server_name"];
+$username = $conf["username"];
+$DB_NAME = $conf["db_name"];
+$password = $conf["pass"];
 
 $connection = mysqli_connect($servername, $username, $password, $DB_NAME);
 if (!$connection)
@@ -20,22 +25,4 @@ if (!$connection)
 // 	echo('Connected');
 // }
 
-?>
-
-
-<?php
-
-//setup your credentials
-// $your_username = "root";
-// $your_password = "";
-
-// $servername = "localhost";
-// $username = $your_username;
-// $password = $your_password;
-// // Create connection
-// $conn = mysqli_connect($servername, $username, $password);
-// // Check connection
-// if (!$conn) {
-//     die("Connection failed: " . mysqli_connect_error());
-// }
 ?>

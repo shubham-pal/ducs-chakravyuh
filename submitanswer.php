@@ -23,14 +23,19 @@ if ($userStatus != null) {
 	exit($userStatus);
 }
 
+$conf = parse_ini_file('app.ini.php');
+
 
 $value = mysqli_real_escape_string($connection, htmlentities($_POST['value']));
 $value = strtolower($value);
 $value = preg_replace('/\s+/', '', $value);
 //echo "received value is " . $value;
 $tmpAttempt = $value;
-// $value = md5($value);
-// todo - activate md5 in production
+
+// do md5 hash in production mode
+if($conf["devmode"] == 0){
+	$value = md5($value);
+}
 
 $query = sprintf("SELECT level FROM user WHERE id = '%s'", $_SESSION['id']);
 //echo $query;
@@ -55,20 +60,12 @@ if (!$result) {
 }
 
 $userRow = mysqli_fetch_array($result);
-// echo "\nmocha - 1\n";
-// echo($value);
-// echo "\nmocha - 2\n";
-// print_r($userRow);
-// echo "\nmocha - 3\n";
-// echo $userRow["answer"];
-// echo "\nmocha - 4\n";
+
 if ($value != $userRow['answer']) {
 	// Incorrect answer.
 
 	$query = sprintf("SELECT last_five_attempts FROM userattempt WHERE user_id = '%s' AND level = '%s'", $_SESSION['id'], $userLevel['level']);
 	$result = mysqli_query($connection, $query);
-	// var_dump($result);
-	// print_r($result);
 
 	if (!$result) {
 		exit('INCORRECT_ANSWER');

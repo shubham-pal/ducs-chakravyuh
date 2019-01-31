@@ -28,6 +28,9 @@ SET time_zone = "+00:00";
 -- Table structure for table `hint`
 --
 
+CREATE DATABASE sankalan_chakra_2k16;
+USE sankalan_chakra_2k16;
+
 CREATE TABLE `hint` (
   `ques_id` int(11) NOT NULL,
   `hint_number` int(11) NOT NULL,

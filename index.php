@@ -335,7 +335,7 @@ if ($timerData['status'] == 1) {
             window.fbAsyncInit = function() {
                 FB.init({
 
-                  appId      : <?php echo "'" . $conf['s_appid'] . "'" ?>, 
+                  appId      : <?php echo "'" . $conf['appid'] . "'" ?>, 
                   cookie     : true,
                   xfbml      : true,
                   version    : 'v3.2'
