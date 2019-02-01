@@ -27,8 +27,10 @@ if ($userStatus != null) {
 
     <title>Chakravyuh Contest</title>
 
-    <link rel="shortcut icon" href="favicon.ico">
-
+    <!-- Favicons -->
+    <link rel='shortcut icon' href='favicon.png' type="image/png">
+    <!-- <link rel='shortcut icon' type='image/x-icon' href='./favicon.ico' /> -->
+        
     <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 

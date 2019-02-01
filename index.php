@@ -29,8 +29,9 @@ $conf = parse_ini_file('app.ini.php');
 
 
         <!-- Favicons -->
-        <link rel="shortcut icon" href="favicon.ico">
-
+        <link rel='shortcut icon' href='favicon.png' type="image/png">
+        <!-- <link rel='shortcut icon' type='image/x-icon' href='./favicon.ico' /> -->
+        
         <!-- Mobile -->
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 
