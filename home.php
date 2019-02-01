@@ -28,8 +28,7 @@ if ($userStatus != null) {
     <title>Chakravyuh Contest</title>
 
     <!-- Favicons -->
-    <link rel='shortcut icon' href='favicon.png' type="image/png">
-    <!-- <link rel='shortcut icon' type='image/x-icon' href='./favicon.ico' /> -->
+    <link rel='shortcut icon' type='image/x-icon' href='./favicon.ico' />
         
     <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -271,7 +270,7 @@ if ($userStatus != null) {
                 <div class="row">
                     <div class="col-lg-12">
                         Copyright &copy; <a href="index.php">Chakravyuh</a> -
-                        <a href="http://sankalanducs.in/" target="_blank">Sankalan 2019</a>,
+                        <a href="http://ducs.in/" target="_blank">Sankalan 2019</a>,
                         <a href="http://cs.du.ac.in/" target="_blank"> DUCS</a>, University of Delhi </div>
                 </div>
             </div>

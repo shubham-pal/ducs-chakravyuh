@@ -29,8 +29,7 @@ $conf = parse_ini_file('app.ini.php');
 
 
         <!-- Favicons -->
-        <link rel='shortcut icon' href='favicon.png' type="image/png">
-        <!-- <link rel='shortcut icon' type='image/x-icon' href='./favicon.ico' /> -->
+        <link rel='shortcut icon' type='image/x-icon' href='./favicon.ico' />
         
         <!-- Mobile -->
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
@@ -136,7 +135,7 @@ $conf = parse_ini_file('app.ini.php');
                     <div class="row">
                         <div class="col-lg-12">
                             Copyright &copy; <a href="index.php" target="_blank" class="tool-tip" title="Chakravyuh">Chakravyuh</a> -
-                            <a href="http://sankalanducs.in/" target="_blank" title="Sankalan 2019" class="tool-tip">Sankalan 2019</a>,
+                            <a href="http://ducs.in/s" target="_blank" title="Sankalan 2019" class="tool-tip">Sankalan 2019</a>,
                             <a href="http://cs.du.ac.in/" target="_blank" title="DUCS" class="tool-tip"> DUCS</a>, University of Delhi </div>
                     </div>
                 </div>

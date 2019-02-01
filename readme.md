@@ -31,15 +31,15 @@ To change event's start and end date, goto [timer.php](./timer.php)
 - [x] 12 attemps visible - done
 - [x] play a mini event for self test
 - [ ] move start and end date control to db
-- [ ] fix favicon.ico
-- [ ] UI new
+- [x] fix favicon.ico
+- [x] UI new
 - [ ] documentation
 
 ## Deploy time
 
 - give the admin ssh access / mysql workbench access to monitor the db live
 - FB login app live
-- deploy site to https for fb to work
+- [x] deploy site to https for fb to work
 
 ## future scope
 
@@ -51,3 +51,6 @@ To change event's start and end date, goto [timer.php](./timer.php)
 - md5 hashing is used while submitting answers.
 - DB -> answers -> store -> in md5
 - for hints base64 decode is used.
+- `app.ini.php` is used for config. It has been gitignored. use `scp` to paste it to server.
+- a sample `app.ini.php` has been provided. Make a `app.ini.php` based on it before starting.
+- also, actual `production-dump.sql` and actual `chakraData` has been put in secret & secret is gitignored. Use scp to paste data to server and import dump directly.
