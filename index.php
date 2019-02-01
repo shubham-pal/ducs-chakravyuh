@@ -48,8 +48,8 @@ $conf = parse_ini_file('app.ini.php');
         <link rel="stylesheet" type="text/css" href="css/leaderboard.css" />
         <!-- CSS end here -->
         <!-- Google fonts start here -->
-        <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
-        <link href="http://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet" type="text/css">
         <!-- Google fonts end here -->
 
     </head>
@@ -136,7 +136,7 @@ $conf = parse_ini_file('app.ini.php');
                     <div class="row">
                         <div class="col-lg-12">
                             Copyright &copy; <a href="index.php" target="_blank" class="tool-tip" title="Chakravyuh">Chakravyuh</a> -
-                            <a href="http://sankalanducs.in/" target="_blank" title="Sankalan 2016" class="tool-tip">Sankalan 2016</a>,
+                            <a href="https://sankalanducs.in/" target="_blank" title="Sankalan 2016" class="tool-tip">Sankalan 2016</a>,
                             <a href="http://cs.du.ac.in/" target="_blank" title="DUCS" class="tool-tip"> DUCS</a>, University of Delhi </div>
                     </div>
                 </div>

@@ -42,8 +42,8 @@ if ($userStatus != null) {
     < <!-- Custom Fonts -->
         <!--        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-        <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-        <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -271,7 +271,7 @@ if ($userStatus != null) {
                 <div class="row">
                     <div class="col-lg-12">
                         Copyright &copy; <a href="index.php">Chakravyuh</a> -
-                        <a href="http://sankalanducs.in/" target="_blank">Sankalan 2016</a>,
+                        <a href="https://sankalanducs.in/" target="_blank">Sankalan 2016</a>,
                         <a href="http://cs.du.ac.in/" target="_blank"> DUCS</a>, University of Delhi </div>
                 </div>
             </div>
@@ -623,7 +623,7 @@ if ($userStatus != null) {
     <script src="js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="js/classie.js"></script>
     <script src="js/cbpAnimatedHeader.js"></script>
 
