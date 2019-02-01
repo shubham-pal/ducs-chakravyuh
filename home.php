@@ -106,12 +106,12 @@ if ($userStatus != null) {
                     <!--                    <img class="img-responsive" src="img/profile.png" alt="">-->
                     <div class="intro-text">
                         <!--                        <span class="name">Start Bootstrap</span>-->
-                        <div class="grid__item color-11">
+                        <!-- <div class="grid__item color-11">
                             <a class="link link--yaku" href="#">
                                 <span>C</span><span>H</span><span>A</span><span>K</span><span>R</span><span>A</span><span>V</span><span>Y</span><span>U</span><span>H</span>
                             </a>
-                        </div>
-                        <hr class="star-light">
+                        </div> -->
+                        <hr class="star-light" style = "margin-top: 200px;">
                         <span class="skills">Hello, <strong><?php echo $_SESSION['name'] ?></strong>. Scroll down to see the question.</span>
                     </div>
                 </div>
@@ -123,9 +123,9 @@ if ($userStatus != null) {
     <section id="answer">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
+                <div class="col-lg-12 text-center" style = "color: #1eabcb;">
                     <h2>Question: <span id="level-number"></span></h2>
-                    <hr class="star-primary">
+                    <hr class="star-primary" style = "border-color: #1eabcb;">
                 </div>
             </div>
             <!--Countdown-->
@@ -173,7 +173,7 @@ if ($userStatus != null) {
                 <!-- </div>
         <div class="row">-->
                 <!--            <div class="col-md-4 portfolio-item">-->
-                <button type="button" id="button-answer" class="btn btn-primary" onclick="submitAnswer()">Submit answer</button>
+                <button type="button" id="button-answer" class="btn btn-primary" onclick="submitAnswer()" style = "background-color: #1eabcb;">Submit answer</button>
                 <!--                <button type="button" class="btn btn-primary btn-lg btn-block">Enter Answer</button>-->
             </div>
             <!--            </div>-->
@@ -210,9 +210,9 @@ if ($userStatus != null) {
     <section id="leaderboard">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
+                <div class="col-lg-12 text-center" style = "color: #1eabcb;">
                     <h2 class="ldrbrdh2">Leaderboard<i class="fa fa-refresh" id="refresh-leaderboard" onclick="updateLeaderboard()" data-toggle="tooltip" title="Refresh" data-placement="bottom"></i></h2>
-                    <hr class="star-primary">
+                    <hr class="star-primary" style = "border-color: #1eabcb;">
                 </div>
             </div>
             <div class="row">   
@@ -260,8 +260,8 @@ if ($userStatus != null) {
                     </div>
                     <div class="footer-col col-md-4">
                         <h3>Contact Us</h3>
-                        <p>Vinamra Arya: (+91) 9958593011
-                            <br>Tushar Jain: (+91) 9999749853</p>
+                        <p>Avinash Prasad: (+91) 9555138871
+                                <br />Sushmita Yadav: (+91) 8826391168</p>
                     </div>
                 </div>
             </div>
@@ -271,7 +271,7 @@ if ($userStatus != null) {
                 <div class="row">
                     <div class="col-lg-12">
                         Copyright &copy; <a href="index.php">Chakravyuh</a> -
-                        <a href="https://sankalanducs.in/" target="_blank">Sankalan 2016</a>,
+                        <a href="http://sankalanducs.in/" target="_blank">Sankalan 2019</a>,
                         <a href="http://cs.du.ac.in/" target="_blank"> DUCS</a>, University of Delhi </div>
                 </div>
             </div>
@@ -334,7 +334,7 @@ if ($userStatus != null) {
                                 <li>Questions can be in any form pictorial, video, text or anything.</li>
                                 <li>For interaction with the organizers there would be organizer managed Facebook page.</li>
                                 <li>Only alphabets and numbers are allowed.
-                                    <br>a) No special characters like @, _, are allowed EXCEPT ".", however you can use whitespace between two words but answer without whitespace is also acceptable (for e.g. Hello world is same as helloworld , HeLloWorlD , HELLO WORLD).
+                                    <br>a) No special characters like @, _, are allowed EXCEPT "." and "-", however you can use whitespace between two words but answer without whitespace is also acceptable (for e.g. Hello world is same as helloworld , HeLloWorlD , HELLO WORLD).
                                     <br>b) Acceptable date format is “1 Jan 2000” for an answer.
                                 </li>
                                 <li>Any attempt of hacking will lead to automatic disqualification.</li>
@@ -343,7 +343,8 @@ if ($userStatus != null) {
                                     <br>a) Hints will be available on the website itself to every participant privately as per their level when they are eligible for it.
                                     <br>b) Any mail asking for answers or hints shall not be entertained.
                                     <br>c) Answers may relate to the hint in any complex form.
-                                    <br>d) Participants can also look for hints of an answer anywhere on the page also. (Image, Video, Text Source code, URL, Current Page). </li>
+                                    <br>d) Participants can also look for hints of an answer anywhere on the page also. (Image, Video, Text Source code, URL, Current Page).
+                                    <br>e) Bonus Hints will be provided on Facebook Page of Chakravyuh. </li>
                                 <li>Point Scheme will be as follows:
                                     <br>a) First 20 players to clear the level will get 10 points.
                                     <br>b) Next 30 players that are from 21 to 50 for that level will get 9 points.

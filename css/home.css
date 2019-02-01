@@ -1,8 +1,11 @@
+.navbar-nav > li > a:hover{
+    color: #1eabcb !important;
+}
 .active > a{
     background-color: #101010 !important;
 }
 .colorRed {
-    color: red;
+    color: red !important;
 }
 
 .colorGreen {
@@ -28,11 +31,14 @@
 }
 
 .link--yaku {
-    color: #2C3E50;
+    /* padding: 25px; */
+    /* border-radius: 10px; */
+    /* background-color: #424242; */
+    color: #1eabcb;
 }
 
 .link--yaku:hover span {
-    color: #1e1a1b;
+    color: #000000;
 }
 
 .chkRules ol {
@@ -113,6 +119,14 @@ margin-bottom: 5px;*/
 .currRow th:nth-child(6),
 .leaderboardTable td:nth-child(6) {
     vertical-align: middle;
+}
+
+.leaderboardTable tr{
+    background-color: #101010;
+}
+
+.leaderboardTable td{
+    color: #1eabcb;
 }
 
 @media(max-width:767px) {

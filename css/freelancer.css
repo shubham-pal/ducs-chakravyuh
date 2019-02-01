@@ -6,6 +6,7 @@
 
 body {
     overflow-x: hidden;
+    background-color: #424242;
 }
 
 p {
@@ -22,7 +23,7 @@ a:focus,
 a:active,
 a.active {
     outline: 0;
-    color: #18bc9c;
+    color: #1eabcb;;
 }
 
 h1,
@@ -82,7 +83,10 @@ hr.star-primary:after {
 header {
     text-align: center;
     color: #fff;
-    background: #1eabcb;
+    /* background: #1eabcb; */
+    height: 450px;
+    background: url("/img/bg.jpg") no-repeat center center fixed;
+    background-size: contain;
 }
 
 header .container {
@@ -109,6 +113,11 @@ header .intro-text .skills {
 }
 
 @media(min-width:768px) {
+
+    header{
+        height: 550px;
+    }
+
     header .container {
         padding-top: 200px;
         padding-bottom: 100px;
