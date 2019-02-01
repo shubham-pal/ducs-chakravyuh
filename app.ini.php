@@ -8,12 +8,12 @@
 devmode = 1
 
 [IN USE]
-appid = 810398922673660
+appid = 166872284219111
 
 server_name = "localhost"
 username = "root"
 db_name = "sankalan_chakra_2k16"
-pass = ""
+pass = "Sahil@123"
 
 ; copy variables from below & paste above
 ; This will allow editing of all config at one place

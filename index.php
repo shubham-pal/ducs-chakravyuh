@@ -24,9 +24,9 @@ if ($timerData['status'] == 1) {
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Chakravyuh</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta content="Chakravyuh, Chakravyuh 2016, Treasure hunt, Online treasure hunt, Sankalan 2016, Online treasure hunt Sankalan, Annual technical festival of Department of Computer Science, University of Delhi, Event Details" name="description" />
+        <meta content="Chakravyuh, Chakravyuh 2019, Treasure hunt, Online treasure hunt, Sankalan 2019, Online treasure hunt Sankalan, Annual technical festival of Department of Computer Science, University of Delhi, Event Details" name="description" />
         
-    	<meta content="Chakravyuh, Chakravyuh 2016, Treasure hunt, Online treasure hunt, events, event list, Sankalan, Online treasure hunt Sankalan, DUCSS, DUCS, Delhi University Computer Science Society, Sankalan 2016, annual fest, Department of Computer Science, University of Delhi, Annual fest of DUCS, Conference Centre, North Campus" name="keywords" />
+    	<meta content="Chakravyuh, Chakravyuh 2019, Treasure hunt, Online treasure hunt, events, event list, Sankalan, Online treasure hunt Sankalan, DUCSS, DUCS, Delhi University Computer Science Society, Sankalan 2019, annual fest, Department of Computer Science, University of Delhi, Annual fest of DUCS, Conference Centre, North Campus" name="keywords" />
 
 
         <!-- Favicons -->
@@ -131,12 +131,12 @@ if ($timerData['status'] == 1) {
             <!-- Social icons end here -->
             <!-- Footer start here -->
             <footer class="fade-down">
-                <!--                <p class="footer-text">&copy; Chakravyuh 2016, All Rights Reserved.</p>-->
+                <!--                <p class="footer-text">&copy; Chakravyuh 2019, All Rights Reserved.</p>-->
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
                             Copyright &copy; <a href="index.php" target="_blank" class="tool-tip" title="Chakravyuh">Chakravyuh</a> -
-                            <a href="http://sankalanducs.in/" target="_blank" title="Sankalan 2016" class="tool-tip">Sankalan 2016</a>,
+                            <a href="http://sankalanducs.in/" target="_blank" title="Sankalan 2019" class="tool-tip">Sankalan 2019</a>,
                             <a href="http://cs.du.ac.in/" target="_blank" title="DUCS" class="tool-tip"> DUCS</a>, University of Delhi </div>
                     </div>
                 </div>
@@ -157,7 +157,7 @@ if ($timerData['status'] == 1) {
                                 <li>Questions can be in any form pictorial, video, text or anything.</li>
                                 <li>For interaction with the organizers there would be organizer managed Facebook page.</li>
                                 <li>Only alphabets and numbers are allowed.
-                                    <br>a) No special characters like @, _, are allowed EXCEPT ".", however you can use whitespace between two words but answer without whitespace is also acceptable (for e.g. Hello world is same as helloworld , HeLloWorlD , HELLO WORLD).
+                                    <br>a) No special characters like @, _, are allowed EXCEPT "." and "-", however you can use whitespace between two words but answer without whitespace is also acceptable (for e.g. Hello world is same as helloworld , HeLloWorlD , HELLO WORLD).
                                     <br>b) Acceptable date format is “1 Jan 2000” for an answer.
                                 </li>
                                 <li>Any attempt of hacking will lead to automatic disqualification.</li>
@@ -166,7 +166,8 @@ if ($timerData['status'] == 1) {
                                     <br>a) Hints will be available on the website itself to every participant privately as per their level when they are eligible for it.
                                     <br>b) Any mail asking for answers or hints shall not be entertained.
                                     <br>c) Answers may relate to the hint in any complex form.
-                                    <br>d) Participants can also look for hints of an answer anywhere on the page also. (Image, Video, Text Source code, URL, Current Page). </li>
+                                    <br>d) Participants can also look for hints of an answer anywhere on the page also. (Image, Video, Text Source code, URL, Current Page).
+                                    <br>e) Bonus Hints will be provided on Facebook Page of Chakravyuh. </li>
                                 <li>Point Scheme will be as follows:
                                     <br>a) First 20 players to clear the level will get 10 points.
                                     <br>b) Next 30 players that are from 21 to 50 for that level will get 9 points.
@@ -197,13 +198,13 @@ if ($timerData['status'] == 1) {
                         <div class="col-md-4 col-sm-4">
                             <i class="fa fa-phone"></i>
                             <h4 class="headingIndex">Phone</h4>
-                            <p>Vinamra Arya: (+91) 9958593011
-                                <br />Tushar Jain: (+91) 9999749853</p>
+                            <p>Avinash Prasad: (+91) 9555138871
+                                <br />Sushmita Yadav: (+91) 8826391168</p>
                         </div>
 
                         <div class="col-md-4 col-sm-4">
                             <i class="fa fa-envelope-o"></i>
-                            <h4 class="headingIndex"><a href="https://www.facebook.com/chakravyuh2k16" target="_blank">Facebook Page</a></h4>
+                            <h4 class="headingIndex"><a href="https://www.facebook.com/ducs.chakravyuh" target="_blank">Facebook Page</a></h4>
                         </div>
                         <div class="col-md-4 col-sm-4">
                             <i class="fa fa-map-marker"></i>
