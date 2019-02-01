@@ -31,7 +31,7 @@
     `name` varchar(100) NOT NULL,
     `email` varchar(50) NOT NULL,
     `picture_url` varchar(400) NOT NULL,
-    `blocked` bit(1) NOT NULL DEFAULT b'0',
+    `blocked` int(1) NOT NULL DEFAULT '0',
     `level` int(11) NOT NULL,
     `points` int(11) NOT NULL,
     `level_update_time` datetime NOT NULL,
@@ -48,6 +48,18 @@
     `last_five_attempts` varchar(200) NOT NULL,
     PRIMARY KEY (`user_id`,`level`)
     ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+    CREATE TABLE `hint_time_control` (
+    `id` int(11) NOT NULL,
+    `LowerLevels_fixed_distance_from_last_hint` int(11) DEFAULT '5',
+    `LowerLevels_added_time_factor_based_on_hint_level` int(11) DEFAULT '1',
+    `partition_point_is_at_level` int(11) DEFAULT '20',
+    `UpperLevels_fixed_distance_from_last_hint` int(11) DEFAULT '10',
+    `UpperLevels_added_time_factor_based_on_hint_level` int(11) DEFAULT '2',
+    PRIMARY KEY (`id`)
+    ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+    INSERT INTO `hint_time_control` (`id`, `LowerLevels_fixed_distance_from_last_hint`, `LowerLevels_added_time_factor_based_on_hint_level`, `partition_point_is_at_level`, `UpperLevels_fixed_distance_from_last_hint`, `UpperLevels_added_time_factor_based_on_hint_level`) VALUES (1, 5, 1, 20, 10, 2);
 
     
 

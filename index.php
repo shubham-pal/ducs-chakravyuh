@@ -11,9 +11,8 @@ if ($timerData['status'] == 1) {
 
         header('Location: home.php');
     }
-    $conf = parse_ini_file('app.ini.php');
 }
-
+$conf = parse_ini_file('app.ini.php');
 ?>
 
     <!DOCTYPE html>
@@ -30,8 +29,9 @@ if ($timerData['status'] == 1) {
 
 
         <!-- Favicons -->
-        <link rel="shortcut icon" href="favicon.ico">
-
+        <link rel='shortcut icon' href='favicon.png' type="image/png">
+        <!-- <link rel='shortcut icon' type='image/x-icon' href='./favicon.ico' /> -->
+        
         <!-- Mobile -->
         <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 
@@ -48,8 +48,8 @@ if ($timerData['status'] == 1) {
         <link rel="stylesheet" type="text/css" href="css/leaderboard.css" />
         <!-- CSS end here -->
         <!-- Google fonts start here -->
-        <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
-        <link href="http://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet" type="text/css">
         <!-- Google fonts end here -->
 
     </head>

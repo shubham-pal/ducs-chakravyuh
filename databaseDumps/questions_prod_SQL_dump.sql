@@ -31,7 +31,7 @@
     `name` varchar(100) NOT NULL,
     `email` varchar(50) NOT NULL,
     `picture_url` varchar(400) NOT NULL,
-    `blocked` bit(1) NOT NULL DEFAULT b'0',
+    `blocked` int(1) NOT NULL DEFAULT '0',
     `level` int(11) NOT NULL,
     `points` int(11) NOT NULL,
     `level_update_time` datetime NOT NULL,
@@ -48,6 +48,18 @@
     `last_five_attempts` varchar(200) NOT NULL,
     PRIMARY KEY (`user_id`,`level`)
     ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+    CREATE TABLE `hint_time_control` (
+    `id` int(11) NOT NULL,
+    `LowerLevels_fixed_distance_from_last_hint` int(11) DEFAULT '5',
+    `LowerLevels_added_time_factor_based_on_hint_level` int(11) DEFAULT '1',
+    `partition_point_is_at_level` int(11) DEFAULT '20',
+    `UpperLevels_fixed_distance_from_last_hint` int(11) DEFAULT '10',
+    `UpperLevels_added_time_factor_based_on_hint_level` int(11) DEFAULT '2',
+    PRIMARY KEY (`id`)
+    ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+    INSERT INTO `hint_time_control` (`id`, `LowerLevels_fixed_distance_from_last_hint`, `LowerLevels_added_time_factor_based_on_hint_level`, `partition_point_is_at_level`, `UpperLevels_fixed_distance_from_last_hint`, `UpperLevels_added_time_factor_based_on_hint_level`) VALUES (1, 5, 1, 20, 10, 2);
 
     
 
@@ -67,4 +79,4 @@ INSERT INTO `question` (`id`, `answer`, `data`, `type`) VALUES
 (1, '9cdfb439c7876e703e307864c9167a15', 'hello' ,'text'), 
 (2, 'ebb7e099481958b192561052613d8386', './chakraData/myIMAGE.png' ,'image'), 
 (3, '902fbdd2b1df0c4f70b4a5d23525e932', './chakraData/myAUDIO.mp3' ,'audio'), 
-(4, '153495edec1b606c24947b1335998bd9', './chakraData/myVIDEOOKOK.mp4' ,'video');
+(4, '153495edec1b606c24947b1335998bd9', './chakraData/myVIDEO.mp4' ,'video');

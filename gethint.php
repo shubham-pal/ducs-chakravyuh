@@ -12,24 +12,6 @@ if ($userStatus != null) {
 
 $conf = parse_ini_file('app.ini.php');
 
-//Compare time of current time and last hint time, return updated hint time if eligible
-function get_next_hint_time($level, $nextHintNumber, $lastHintTime)
-{
-	date_default_timezone_set('Asia/Calcutta');
-	$currTime = time();
-
-	if ($level <= 20) {
-		$nextHintTime = (5 * 60) + ($nextHintNumber * 1 * 60) + strtotime($lastHintTime);
-	} else {
-		$nextHintTime = (10 * 60) + ($nextHintNumber * 2 * 60) + strtotime($lastHintTime);
-	}
-
-	if ($nextHintTime <= $currTime) {
-		return $nextHintTime;
-	}
-	return 0;
-}
-
 $hintsData = array();
 $id = $_SESSION['id'];
 //Get all previous hints of user
@@ -42,6 +24,7 @@ if (!$resultGetAllPrevHints) {
 	exit('ERROR_RETRIEVING_HINTS');
 }
 
+// print_r($resultGetAllPrevHints);
 if (mysqli_num_rows($resultGetAllPrevHints) > 0) {
 	while ($hints = mysqli_fetch_array($resultGetAllPrevHints)) {
 		if ($conf["devmode"] == 1) {
@@ -66,7 +49,46 @@ while (true) {
 	if (mysqli_num_rows($result) > 0) {
 		$participant = mysqli_fetch_array($result);
 
-		$nextHintTime = get_next_hint_time($participant["level"], $participant["next_hint"], $participant["last_hint_time"]);
+		// time manipulation
+		date_default_timezone_set('Asia/Calcutta');
+		$currTime = time();
+		$nextHintTime = 0;
+	
+		// default setting
+		$LL_fdflh = 5;
+		$LL_atfbohl = 1;
+		$ppiat = 20;
+		$UL_fdflh = 10;
+		$UL_atfbohl = 2;
+
+		// fetch setting from db - works - add a new row to set to default
+		$queryToGetTimeControlSettings = "SELECT * FROM `hint_time_control`";
+		$resultGetTimeControlSettings = mysqli_query($connection, $queryToGetTimeControlSettings);
+		if ($resultGetTimeControlSettings && mysqli_num_rows($resultGetTimeControlSettings) > 0) {
+			while ($s = mysqli_fetch_assoc($resultGetTimeControlSettings)) {
+				$LL_fdflh = (int)$s["LowerLevels_fixed_distance_from_last_hint"];
+				$LL_atfbohl = (int)$s["LowerLevels_added_time_factor_based_on_hint_level"];
+				$ppiat = (int)$s["partition_point_is_at_level"];
+				$UL_fdflh = (int)$s["UpperLevels_fixed_distance_from_last_hint"];
+				$UL_atfbohl = (int)$s["UpperLevels_added_time_factor_based_on_hint_level"];
+			}
+		}
+
+		// testing
+		// print_r($LL_fdflh);
+
+		if ($participant["level"] <= $ppiat) {
+			$nextHintTime = ($LL_fdflh * 60) + ($participant["next_hint"] * $LL_atfbohl * 60) + strtotime($participant["last_hint_time"]);
+		} else {
+			$nextHintTime = ($UL_fdflh * 60) + ($participant["next_hint"] * $UL_atfbohl * 60) + strtotime($participant["last_hint_time"]);
+		}
+
+
+		if ($nextHintTime <= $currTime) {
+			// nothing
+		} else {
+			$nextHintTime = 0;
+		}
 
 		$participantLevel = $participant["level"];
 		$participantNextHintNumber = $participant["next_hint"];

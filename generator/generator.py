@@ -4,6 +4,8 @@ import base64, hashlib
 
 # User Data -> MODIFY ONLY WHEN YOU KNOW WHAT YOU ARE DOING
 
+# Mode is "prod" / "dev"
+
 fileLevelObjectName = "questions"
 fieldQuestionNumber = "Qnumber"
 fieldQuestionData = "Qdata"
@@ -51,7 +53,7 @@ def queryTocreateAllTables():
     `name` varchar(100) NOT NULL,
     `email` varchar(50) NOT NULL,
     `picture_url` varchar(400) NOT NULL,
-    `blocked` bit(1) NOT NULL DEFAULT b'0',
+    `blocked` int(1) NOT NULL DEFAULT '0',
     `level` int(11) NOT NULL,
     `points` int(11) NOT NULL,
     `level_update_time` datetime NOT NULL,
@@ -69,6 +71,18 @@ def queryTocreateAllTables():
     PRIMARY KEY (`user_id`,`level`)
     ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+    CREATE TABLE `hint_time_control` (
+    `id` int(11) NOT NULL,
+    `LowerLevels_fixed_distance_from_last_hint` int(11) DEFAULT '5',
+    `LowerLevels_added_time_factor_based_on_hint_level` int(11) DEFAULT '1',
+    `partition_point_is_at_level` int(11) DEFAULT '20',
+    `UpperLevels_fixed_distance_from_last_hint` int(11) DEFAULT '10',
+    `UpperLevels_added_time_factor_based_on_hint_level` int(11) DEFAULT '2',
+    PRIMARY KEY (`id`)
+    ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+    INSERT INTO `hint_time_control` (`id`, `LowerLevels_fixed_distance_from_last_hint`, `LowerLevels_added_time_factor_based_on_hint_level`, `partition_point_is_at_level`, `UpperLevels_fixed_distance_from_last_hint`, `UpperLevels_added_time_factor_based_on_hint_level`) VALUES (1, 5, 1, 20, 10, 2);
+
     """
 
 
@@ -82,15 +96,22 @@ def queryToTruncateRequiredTables():
 # Functions to work on hints
 
 
-def encodeBase64(stringToEncode):
-    return base64.b64encode(stringToEncode.encode()).decode()
+def encodeBase64(stringToEncode, mode):
+    if mode == "prod":
+        return base64.b64encode(stringToEncode.encode()).decode()
+    else:
+        return stringToEncode
 
 
-def decodeBase64(stringToDecode):
-    return base64.b64decode(stringToDecode.encode()).decode()
+def decodeBase64(stringToDecode, mode):
+    if mode == "prod":
+        return base64.b64decode(stringToDecode.encode()).decode()
+    else:
+        return stringToDecode
 
 
-def queryToInsertEncodedHints(questionFile):
+
+def queryToInsertEncodedHints(questionFile, mode):
     query = """\nINSERT INTO `hint` (`ques_id`, `hint_number`, `data`) VALUES \n"""
     with open(questionFile) as file:
         questions = json.load(file)[fileLevelObjectName]
@@ -98,7 +119,7 @@ def queryToInsertEncodedHints(questionFile):
             for hintNo, hint in enumerate(question[fieldQuestionHint]):
                 questionId = qNo + 1
                 hint_number = hintNo + 1
-                encoded_hint_data = encodeBase64(hint)
+                encoded_hint_data = encodeBase64(hint, mode)
                 # generate query here
                 query += "({0}, {1}, '{2}'), \n".format(
                     questionId, hint_number, encoded_hint_data)
@@ -108,17 +129,20 @@ def queryToInsertEncodedHints(questionFile):
 # Functions to work on answers
 
 
-def encodeMd5Hash(stringToEncode):
-    return hashlib.md5(stringToEncode.encode()).hexdigest()
+def encodeMd5Hash(stringToEncode, mode):
+    if mode == "prod":
+        return hashlib.md5(stringToEncode.encode()).hexdigest()
+    else:
+        return stringToEncode
 
 
-def queryToInsertEncodedQuestions(questionFile):
+def queryToInsertEncodedQuestions(questionFile, mode):
     query = """\nINSERT INTO `question` (`id`, `answer`, `data`, `type`) VALUES \n"""
     with open(questionFile) as file:
         questions = json.load(file)[fileLevelObjectName]
         for qNo, question in enumerate(questions):
             questionId = qNo + 1
-            answer = encodeMd5Hash(question[fieldQuestionAnswer])
+            answer = encodeMd5Hash(question[fieldQuestionAnswer], mode)
             questionData = question[fieldQuestionData]
             questionType = question[fieldQuestionType]
             # generate query here
@@ -131,22 +155,23 @@ def queryToInsertEncodedQuestions(questionFile):
 
 
 def generateDatabaseDump(jsonFileOfQuestions,
-                         sqlDumpOfQuestions):
+                         sqlDumpOfQuestions, mode):
     print(queryToCreateDB(), file=open(sqlDumpOfQuestions, "w"))
     print(queryTocreateAllTables(), file=open(sqlDumpOfQuestions, "a"))
     print(queryToTruncateRequiredTables(), file=open(sqlDumpOfQuestions, "a"))
     print(
-        queryToInsertEncodedHints(jsonFileOfQuestions),
+        queryToInsertEncodedHints(jsonFileOfQuestions, mode),
         file=open(sqlDumpOfQuestions, "a"))
     print(
-        queryToInsertEncodedQuestions(jsonFileOfQuestions),
+        queryToInsertEncodedQuestions(jsonFileOfQuestions, mode),
         file=open(sqlDumpOfQuestions, "a"))
 
 
 def main(*args):
-    questions = args[1] if len(args) > 2 else "questions.json"
-    sqlDump = args[2] if len(args) > 2 else "questions_SQL_dump.sql"
-    generateDatabaseDump(questions, sqlDump)
+    mode = args[1] if len(args) > 3 else "prod"
+    questions = args[2] if len(args) > 3 else "questions.json"
+    sqlDump = args[3] if len(args) > 3 else "questions_prod_SQL_dump.sql"
+    generateDatabaseDump(questions, sqlDump, mode)
 
 
 if __name__ == "__main__":
