@@ -21,7 +21,7 @@ $conf = parse_ini_file('./../app.ini.php');
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Chakravyuh</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta content="Chakravyuh, Chakravyuh 2019, Treasure hunt, Online treasure hunt, Sankalan 2019, Online treasure hunt Sankalan, Annual technical festival of Department of Computer Science, University of Delhi, Event Details" name="description" />
+    <meta content="Chakravyuh is the online treasure hunt event of Sankalan-The Annual Tech Fest of Department of Computer Science, University of Delhi." name="description" />
     
     <meta content="Chakravyuh, Chakravyuh 2019, Treasure hunt, Online treasure hunt, events, event list, Sankalan, Online treasure hunt Sankalan, DUCSS, DUCS, Delhi University Computer Science Society, Sankalan 2019, annual fest, Department of Computer Science, University of Delhi, Annual fest of DUCS, Conference Centre, North Campus" name="keywords" />
 

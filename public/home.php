@@ -1,5 +1,4 @@
 <?php
-
 require 'timer.php';
 
 if ($timerData['status'] != 1) {
@@ -11,7 +10,6 @@ require 'checkuserstatus.php';
 if ($userStatus != null) {
     header('Location: index.php');
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -112,6 +110,7 @@ if ($userStatus != null) {
                         </div> -->
                         <hr class="star-light" style = "margin-top: 200px;">
                         <span class="skills">Hello, <strong><?php echo $_SESSION['name'] ?></strong>. Scroll down to see the question.</span>
+                        <br><span class="skills">* This event is only for DUCS students. Inter-college Chakravyuh will also be announced in a few weeks.</span>
                     </div>
                 </div>
             </div>
