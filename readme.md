@@ -35,6 +35,7 @@ To change event's start and end date, goto [timer.php](./timer.php)
 - [ ] UI colors and everything
 - [ ] documentation and instructions
 - [ ] thumbs up ki placement
+- [ ] index page is stacking old error messages. we need to remove them.
 
 ## Deploy time
 
