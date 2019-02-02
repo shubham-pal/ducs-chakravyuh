@@ -187,6 +187,13 @@ if ($userStatus != null) {
     <section class="success" id="hint">
         <div class="container">
             <div class="row">
+            <div class="row">
+                    <div class="alert alert-success col-md-12 col-md-offset-0" align="center">
+                        <h3>
+                        If you cannot answer the question even after all the hints given here, look out for bonus hints on the facebook page. 
+                        </h3>
+                    </div>
+                </div>
                 <div class="col-lg-12 text-center">
                     <h2 class="hinth2">Hint<i class="fa fa-refresh" id="refresh-hints" onclick="getHints()" data-toggle="tooltip" title="Refresh" data-placement="top"></i></h2>
                     <hr class="star-light">
@@ -214,11 +221,6 @@ if ($userStatus != null) {
                 </div>
             </div>
             <div class="row">
-                <div class="row">
-                    <div class="alert alert-danger col-md-12 col-md-offset-0" align="center">
-                        <h3><strong>Hello Juniors !</strong> Don't be discouraged by the participation of seniors. They'll be blocked soon.</h3>
-                    </div>
-                </div>
                 <div class="table-responsive col-lg-12">
                     <table class="table table-hover leaderboardTable table-condensed text-center">
                         <thead>
