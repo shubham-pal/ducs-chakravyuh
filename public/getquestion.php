@@ -11,7 +11,9 @@ if ($userStatus != null) {
 }
 
 // Check if the user cleared all the questions.
-if ($_SESSION['level'] > 50) {
+// todo - fetch this based on number of questions
+$totalLevels = 35;
+if ($_SESSION['level'] > $totalLevels) {
 	$query = "SELECT id FROM user WHERE level > 50 ORDER BY level_update_time_micro ASC LIMIT 1";
 	$result = mysqli_query($connection, $query);
 	if (!$result) {

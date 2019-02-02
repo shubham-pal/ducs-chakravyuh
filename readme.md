@@ -30,10 +30,11 @@ To change event's start and end date, goto [timer.php](./timer.php)
 - [x] thumbs up -> should not affect dom
 - [x] 12 attemps visible - done
 - [x] play a mini event for self test
-- [ ] move start and end date control to db
 - [x] fix favicon.ico
-- [x] UI new
+- [ ] move start and end date control to db
+- [ ] UI colors and everything
 - [ ] documentation and instructions
+- [ ] thumbs up ki placement
 
 ## Deploy time
 
