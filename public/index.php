@@ -9,7 +9,7 @@ if ($timerData['status'] == 1) {
     if ($userStatus == null) {
         // User is logged in and not blocked.
 
-        header('Location: home.php');
+        header('Location: /home.php');
     }
 }
 $conf = parse_ini_file('./../app.ini.php');
@@ -291,7 +291,7 @@ $conf = parse_ini_file('./../app.ini.php');
                                     $('#login-success').show(300);
                                     // redirection
                                     setTimeout(function () {
-                                        window.location = 'home.php';
+                                        window.location = '/home.php';
                                     }, 1000);
                                 } else if (msg == 'USER_REG_ERROR' || msg == 'LOGIN_DATA_MISSING') {
                                     $('#login-error').html("<strong>Something went wrong!</strong> Unable to login/register you. Please try again after some time.").show(300);
@@ -334,7 +334,6 @@ $conf = parse_ini_file('./../app.ini.php');
                 //     }
                 // }, true);
 
-                
                 FB.login(function (response) {
                             handleLoginStatus(response);
                         }, {
