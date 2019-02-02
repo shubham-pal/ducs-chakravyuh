@@ -16,7 +16,7 @@ $(function() {
 
     function getRemaningTimeFromServerAndStartTimer() {
         $.ajax({
-            url: "/timer.php",
+            url: "timer.php",
             type: "GET",
             data: "operation=difference",
             success: function(response) {

@@ -28,11 +28,11 @@ $profilePicUrl = mysqli_real_escape_string($connection, urlencode($_POST['pictur
 
 $query = "SELECT blocked, level FROM user WHERE id = '$id'";
 $result = mysqli_query($connection, $query);
-print_r($result);
+
 if (!$result) {
 	// Unable to register.
 	session_destroy();
-	echo mysqli_error($connection);
+	// echo mysqli_error($connection);
 	exit('USER_REG_ERROR');
 }
 
@@ -51,7 +51,7 @@ if ($tmpCount == 0) {
 	$result = mysqli_query($connection, $query);
 	if (!$result) {
 		// Unable to register.
-		echo mysqli_error($connection);
+		// echo mysqli_error($connection);
 		session_destroy();
 		exit('USER_REG_ERROR');
 	}

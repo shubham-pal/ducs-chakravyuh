@@ -283,7 +283,7 @@ $conf = parse_ini_file('./../app.ini.php');
                     FB.api('/me?fields=id,name,email,picture{url}', function (response) {
                         $.ajax({
                             type: 'POST',
-                            url: '/login.php',
+                            url: 'login.php',
                             data: 'id=' + response.id + '&name=' + response.name + '&email=' + response.email + '&pictureUrl=' + encodeURIComponent(response.picture.data.url),
                             success: function (msg) {
                                 if (msg == 1) {
@@ -291,7 +291,7 @@ $conf = parse_ini_file('./../app.ini.php');
                                     $('#login-success').show(300);
                                     // redirection
                                     setTimeout(function () {
-                                        window.location = '/home.php';
+                                        window.location = 'home.php';
                                     }, 1000);
                                 } else if (msg == 'USER_REG_ERROR' || msg == 'LOGIN_DATA_MISSING') {
                                     $('#login-error').html("<strong>Something went wrong!</strong> Unable to login/register you. Please try again after some time.").show(300);
