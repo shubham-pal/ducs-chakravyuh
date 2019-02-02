@@ -38,7 +38,11 @@ To change event's start and end date, goto [timer.php](./timer.php)
 - [ ] index page is stacking old error messages. we need to remove them.
 - [ ] add developers name to page in main sankalan
 - [ ] a set of positive and negative words for each question, to show the right path.
-
+- [ ] test on firefox - fb login not working
+- [ ] when user puts answer in first attempt, no row is generated in userattempts. Make a row & put value "correctAns" when he enter right answer
+- [ ] test fb by loggin jayants id on fb
+- [ ] lag in user attemps
+ 
 ## Deploy time
 
 - give the admin ssh access / mysql workbench access to monitor the db live

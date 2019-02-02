@@ -213,7 +213,12 @@ if ($userStatus != null) {
                     <hr class="star-primary" style = "border-color: #1eabcb;">
                 </div>
             </div>
-            <div class="row">   
+            <div class="row">
+                <div class="row">
+                    <div class="alert alert-danger col-md-12 col-md-offset-0" align="center">
+                        <h3><strong>Hello Juniors !</strong> Don't be discourgaed by the participation of seniors. They'll be blocked soon.</h3>
+                    </div>
+                </div>
                 <div class="table-responsive col-lg-12">
                     <table class="table table-hover leaderboardTable table-condensed text-center">
                         <thead>
