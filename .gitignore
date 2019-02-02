@@ -1,5 +1,11 @@
 .vscode/
 
+# contains private data. Directly push it to server
 secret/
-public/chakraData/**
+
+# config variables. Directly push to server
 app.ini.php
+
+# Dont upload test data to github
+public/chakraData/**
+

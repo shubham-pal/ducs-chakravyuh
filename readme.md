@@ -33,7 +33,7 @@ To change event's start and end date, goto [timer.php](./timer.php)
 - [ ] move start and end date control to db
 - [x] fix favicon.ico
 - [x] UI new
-- [ ] documentation
+- [ ] documentation and instructions
 
 ## Deploy time
 
