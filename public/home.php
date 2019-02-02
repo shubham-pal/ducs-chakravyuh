@@ -140,7 +140,7 @@ if ($userStatus != null) {
             <div class="col-sm-4 portfolio-item ques">
                 <br>
                 <div class="alert alert-success collapse" id="event-completed" role="alert"><strong>Congratulations!</strong> You've successfully completed the game. See your ranking in the leaderboard.</div>
-                <div class="alert alert-success collapse" id="event-completed-winner" role="alert"><strong>Congratulations, <?php echo $_SESSION['name'] ?>!</strong> You're the winner of Chakravyuh 2k16!</div>
+                <div class="alert alert-success collapse" id="event-completed-winner" role="alert"><strong>Congratulations, <?php echo $_SESSION['name'] ?>!</strong> You're the winner of Chakravyuh 2019</div>
                 <a href="#enlargeImage" id="ques-image" class="portfolio-link" data-toggle="modal" style="display: none;">
                     <img src="" class="img-responsive img-centered" alt="question">
                     <!-- <div class="caption">
@@ -250,7 +250,7 @@ if ($userStatus != null) {
                         <h3>Around the Web</h3>
                         <ul class="list-inline">
                             <li>
-                                <a href="https://www.facebook.com/chakravyuh2k16" class="btn-social btn-outline tool-tip" target="_blank" title="Facebook"><i class="fa fa-fw fa-facebook"></i></a>
+                                <a href="https://www.facebook.com/ducs.chakravyuh" class="btn-social btn-outline tool-tip" target="_blank" title="Facebook"><i class="fa fa-fw fa-facebook"></i></a>
                             </li>
                             <li>
                                 <a href="https://twitter.com/sankalan_ducs" class="btn-social btn-outline tool-tip" target="_blank" title="Twitter"><i class="fa fa-fw fa-twitter"></i></a>

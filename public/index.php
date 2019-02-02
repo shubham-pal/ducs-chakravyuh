@@ -12,7 +12,8 @@ if ($timerData['status'] == 1) {
         header('Location: home.php');
     }
 }
-$conf = parse_ini_file('app.ini.php');
+$conf = parse_ini_file('./../app.ini.php');
+
 ?>
 
     <!DOCTYPE html>
@@ -124,7 +125,7 @@ $conf = parse_ini_file('app.ini.php');
                 <li><img class="img-responsive" alt="Login using Facebook" id="facebook-login-button" src="img/LoginWithFacebook.png" onclick="loginWithFacebook()" title="Login using Facebook"></li>
                 <br>
                 <br>
-                <li><a href="https://www.facebook.com/chakravyuh2k16" class="fb tool-tip" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://www.facebook.com/ducs.chakravyuh" class="fb tool-tip" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
                 <li><a href="https://twitter.com/sankalan_ducs" class="twitter tool-tip" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
             </ul>
             <!-- Social icons end here -->

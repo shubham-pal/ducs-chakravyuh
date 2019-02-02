@@ -1,6 +1,6 @@
 <?php
 
-$conf = parse_ini_file('app.ini.php');
+$conf = parse_ini_file('./../app.ini.php');
 
 if ($conf["devmode"] == 1) {
     error_reporting(1);

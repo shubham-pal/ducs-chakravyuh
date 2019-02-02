@@ -23,7 +23,8 @@ if ($userStatus != null) {
 	exit($userStatus);
 }
 
-$conf = parse_ini_file('app.ini.php');
+$conf = parse_ini_file('./../app.ini.php');
+
 
 
 $value = mysqli_real_escape_string($connection, htmlentities($_POST['value']));
@@ -120,10 +121,10 @@ if (!$result1) {
 
 $tmpCount = mysqli_num_rows($result1);
 
-$handle = fopen("tempcount.txt", "a");
-$contents = $tmpCount . '||' . $_SESSION['id'] . '||' . $_SESSION['level'] . '||' . $userLevel['level'] . "\r\n";
-fwrite($handle, $contents);
-fclose($handle);
+// $handle = fopen("tempcount.txt", "a");
+// $contents = $tmpCount . '||' . $_SESSION['id'] . '||' . $_SESSION['level'] . '||' . $userLevel['level'] . "\r\n";
+// fwrite($handle, $contents);
+// fclose($handle);
 
 if ($tmpCount == 0) {
 	// First one to clear this level.
