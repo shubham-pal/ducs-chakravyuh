@@ -283,7 +283,7 @@ $conf = parse_ini_file('./../app.ini.php');
                     FB.api('/me?fields=id,name,email,picture{url}', function (response) {
                         $.ajax({
                             type: 'POST',
-                            url: 'login.php',
+                            url: '/login.php',
                             data: 'id=' + response.id + '&name=' + response.name + '&email=' + response.email + '&pictureUrl=' + encodeURIComponent(response.picture.data.url),
                             success: function (msg) {
                                 if (msg == 1) {
@@ -306,6 +306,9 @@ $conf = parse_ini_file('./../app.ini.php');
                             	} else if (msg == 'USER_REG_CLOSE') {
                                 $('#login-error').html("<strong>Registrations closed!</strong> Thank you for showing interest in the event. We look forward to seeing you next year.").show(300);
                             	}
+                            },
+                            error: function (msg) {
+                                console.log(msg);
                             }
                         });
                     });

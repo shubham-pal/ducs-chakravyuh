@@ -389,7 +389,7 @@ if ($userStatus != null) {
         $('#input-answer').val('');
         $.ajax({
             type: 'POST',
-            url: 'submitanswer.php',
+            url: '/submitanswer.php',
             data: 'value=' + value,
             success: function(response) {
                 
@@ -439,7 +439,7 @@ if ($userStatus != null) {
 
         $.ajax({
             type: 'GET',
-            url: 'getquestion.php',
+            url: '/getquestion.php',
             success: function(response) {
                 switch (response) {
                     case 'USER_BLOCKED':
@@ -509,7 +509,7 @@ if ($userStatus != null) {
 
         $.ajax({
             type: 'GET',
-            url: 'gethint.php',
+            url: '/gethint.php',
             success: function(response) {
                 switch (response) {
                     case 'USER_BLOCKED':
@@ -557,7 +557,7 @@ if ($userStatus != null) {
 
         $.ajax({
             type: 'GET',
-            url: 'leaderboard.php',
+            url: '/leaderboard.php',
             success: function(response) {
 
                 switch (response) {
