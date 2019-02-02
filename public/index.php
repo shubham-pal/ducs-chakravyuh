@@ -321,25 +321,25 @@ $conf = parse_ini_file('./../app.ini.php');
 
             function loginWithFacebook() {
                 // todo
-                FB.getLoginStatus(function (response) {
-                    console.log(response);
-                    if (response.status === 'connected') {
-                        handleLoginStatus(response);
-                    } else {
-                        FB.login(function (response) {
-                            handleLoginStatus(response);
-                        }, {
-                            scope: 'public_profile, email'
-                        });
-                    }
-                }, true);
-
-
-                // FB.login(function (response) {
+                // FB.getLoginStatus(function (response) {
+                //     console.log(response);
+                //     if (response.status === 'connected') {
+                //         handleLoginStatus(response);
+                //     } else {
+                //         FB.login(function (response) {
                 //             handleLoginStatus(response);
                 //         }, {
                 //             scope: 'public_profile, email'
                 //         });
+                //     }
+                // }, true);
+
+                
+                FB.login(function (response) {
+                            handleLoginStatus(response);
+                        }, {
+                            scope: 'public_profile, email'
+                        });
             }
 
             window.fbAsyncInit = function() {
