@@ -188,9 +188,9 @@ if ($userStatus != null) {
         <div class="container">
             <div class="row">
             <div class="row">
-                    <div class="alert alert-success col-md-12 col-md-offset-0" align="center">
+                    <div class="alert alert-warning col-md-12 col-md-offset-0" align="center">
                         <h3>
-                        If you cannot answer the question even after all the hints given here, look out for bonus hints on the facebook page. 
+                        Welcome to the Rush Hour. The bonus hints will now be in boost mode. Lookout for them on the facebook page.
                         </h3>
                     </div>
                 </div>
@@ -222,10 +222,10 @@ if ($userStatus != null) {
             </div>
             <div class="row">
             <div class="row">
-                    <div class="alert alert-danger col-md-12 col-md-offset-0" align="center">
-                        <h4>
-                        Hello Juniors! The contest is being extended by 1 hour. We call it the Rush Hour. Hints come in at super speed giving you the power to change the leaderboard. Bonus hints on facebook will also be boosted during this hour. All the best! May the best one Win!
-                        </h4>
+                    <div class="alert alert-warning col-md-12 col-md-offset-0" align="center">
+                        <h3>
+                        Hello Juniors! The contest is being extended by 1 hour. We call it the Rush Hour. Hints come in at super speed giving you the power to change the leaderboard. May the best one Win!
+                        </h3>
                     </div>
                 </div>
                 <div class="table-responsive col-lg-12">
