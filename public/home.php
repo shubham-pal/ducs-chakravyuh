@@ -224,7 +224,7 @@ if ($userStatus != null) {
             <div class="row">
                     <div class="alert alert-warning col-md-12 col-md-offset-0" align="center">
                         <h3>
-                        Hello Juniors! The contest is being extended by 1 hour. We call it the Rush Hour. Hints come in at super speed giving you the power to change the leaderboard. May the best one Win!
+                        Hello Juniors! The contest is being extended by one hour. We call it the Rush Hour. Hints come in at super speed giving you the power to change the leaderboard. May the best one Win!
                         </h3>
                     </div>
                 </div>
