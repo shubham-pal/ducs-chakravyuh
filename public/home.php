@@ -221,6 +221,15 @@ if ($userStatus != null) {
                 </div>
             </div>
             <div class="row">
+            <div class="row">
+                    <div class="alert alert-danger col-md-12 col-md-offset-0" align="center">
+                        <h4>
+                        Attention! Scoring scheme will change after level 20. 
+                        Thereafter, first 10 participants to clear the level will score 10 points each. 
+                        Next 20 will score 9 points each. and everyone else clearing the level after that will score 8 points each.
+                        </h4>
+                    </div>
+                </div>
                 <div class="table-responsive col-lg-12">
                     <table class="table table-hover leaderboardTable table-condensed text-center">
                         <thead>
