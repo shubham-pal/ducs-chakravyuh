@@ -224,9 +224,7 @@ if ($userStatus != null) {
             <div class="row">
                     <div class="alert alert-danger col-md-12 col-md-offset-0" align="center">
                         <h4>
-                        Attention! Scoring scheme will change from level 20. 
-                        Thereafter, first 10 participants to clear the level will score 10 points each. 
-                        Next 20 will score 9 points each. and everyone else clearing the level after that will score 8 points each.
+                        Hello Juniors! The contest is being extended by 1 hour. We call it the Rush Hour. Hints come in at super speed giving you the power to change the leaderboard. Bonus hints on facebook will also be boosted during this hour. All the best! May the best one Win!
                         </h4>
                     </div>
                 </div>
