@@ -4,11 +4,11 @@ date_default_timezone_set('Asia/Calcutta');
 
 // Event start time.
 // mktime(hour,minute,second,month,day,year,is_dst);
-$startTime = mktime(22, 0, 0, 2, 2, 2019);
+$startTime = mktime(21, 0, 0, 2, 2, 2019);
 // $startTime = mktime(00, 48, 00, 2, 1, 2019);
 
 // Event end time.
-$endTime = mktime(21, 0, 0, 2, 3, 2019);
+$endTime = mktime(22, 0, 0, 2, 3, 2019);
 
 // Current time.
 $currTime = time();
