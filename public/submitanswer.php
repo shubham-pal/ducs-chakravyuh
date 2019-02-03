@@ -149,7 +149,7 @@ if (!$result) {
 $count = mysqli_fetch_array($result);
 
 // if level > 20
-if ($userLevel['level'] > 20) {
+if ($userLevel['level'] >= 20) {
 	if ($count['count'] < 10) {
 		$points = 10;
 	} else if ($count['count'] < 30) {
