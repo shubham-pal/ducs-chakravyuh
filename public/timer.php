@@ -8,8 +8,7 @@ $startTime = mktime(21, 0, 0, 2, 2, 2019);
 // $startTime = mktime(00, 48, 00, 2, 1, 2019);
 
 // Event end time.
-$endTime = mktime(19, 45, 0, 2, 4, 2019);
-// $endTime = mktime(22, 0, 0, 2, 3, 2019);
+$endTime = mktime(22, 0, 0, 2, 3, 2019);
 
 // Current time.
 $currTime = time();
