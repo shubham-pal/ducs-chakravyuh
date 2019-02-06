@@ -41,7 +41,7 @@ To change event's start and end date, goto [timer.php](./timer.php)
 - [ ] test on firefox - fb login not working
 - [ ] when user puts answer in first attempt, no row is generated in userattempts. Make a row & put value "correctAns" when he enter right answer
 - [ ] test fb by loggin jayants id on fb
-- [ ] lag in user attemps
+- [ ] lag in user attemps ->> enter an empty array in user attempts when user reaches next level
  
 ## Deploy time
 
