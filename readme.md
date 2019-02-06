@@ -45,6 +45,7 @@ To change event's start and end date, goto [timer.php](./timer.php)
 - [ ] winner on level x -> no of questions
 - [ ] fb app login popup
 - [ ] start end time
+- [ ] user attemps ke saath name as well
  
 ## Deploy time
 
