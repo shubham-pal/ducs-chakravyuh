@@ -1,11 +1,11 @@
-# https://git-scm.com/docs/gitignore
-# https://help.github.com/articles/ignoring-files
-# Example .gitignore files: https://github.com/github/gitignore
-/bower_components/
-/node_modules/
 .vscode/
-tempcount.txt
-jatin69.txt
-jatin69.txt.pub
-app.ini.php
+
+# contains private data. Directly push it to server
 secret/
+
+# config variables. Directly push to server
+app.ini.php
+
+# Dont upload test data to github
+public/chakraData/**
+

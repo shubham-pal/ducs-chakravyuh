@@ -1,5 +1,4 @@
 <?php
-
 require 'timer.php';
 
 if ($timerData['status'] != 1) {
@@ -11,7 +10,6 @@ require 'checkuserstatus.php';
 if ($userStatus != null) {
     header('Location: index.php');
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -28,8 +26,7 @@ if ($userStatus != null) {
     <title>Chakravyuh Contest</title>
 
     <!-- Favicons -->
-    <link rel='shortcut icon' href='favicon.png' type="image/png">
-    <!-- <link rel='shortcut icon' type='image/x-icon' href='./favicon.ico' /> -->
+    <link rel='shortcut icon' type='image/x-icon' href='./favicon.ico' />
         
     <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -113,6 +110,7 @@ if ($userStatus != null) {
                         </div> -->
                         <hr class="star-light" style = "margin-top: 200px;">
                         <span class="skills">Hello, <strong><?php echo $_SESSION['name'] ?></strong>. Scroll down to see the question.</span>
+                        <br><span class="skills">* This event is only for DUCS students. Inter-college Chakravyuh will also be announced in a few weeks.</span>
                     </div>
                 </div>
             </div>
@@ -141,7 +139,7 @@ if ($userStatus != null) {
             <div class="col-sm-4 portfolio-item ques">
                 <br>
                 <div class="alert alert-success collapse" id="event-completed" role="alert"><strong>Congratulations!</strong> You've successfully completed the game. See your ranking in the leaderboard.</div>
-                <div class="alert alert-success collapse" id="event-completed-winner" role="alert"><strong>Congratulations, <?php echo $_SESSION['name'] ?>!</strong> You're the winner of Chakravyuh 2k16!</div>
+                <div class="alert alert-success collapse" id="event-completed-winner" role="alert"><strong>Congratulations, <?php echo $_SESSION['name'] ?>!</strong> You're the winner of Chakravyuh 2019</div>
                 <a href="#enlargeImage" id="ques-image" class="portfolio-link" data-toggle="modal" style="display: none;">
                     <img src="" class="img-responsive img-centered" alt="question">
                     <!-- <div class="caption">
@@ -189,6 +187,13 @@ if ($userStatus != null) {
     <section class="success" id="hint">
         <div class="container">
             <div class="row">
+            <div class="row">
+                    <div class="alert alert-warning col-md-12 col-md-offset-0" align="center">
+                        <h3>
+                        Welcome to the Rush Hour. The bonus hints will now be in boost mode. Lookout for them on the facebook page.
+                        </h3>
+                    </div>
+                </div>
                 <div class="col-lg-12 text-center">
                     <h2 class="hinth2">Hint<i class="fa fa-refresh" id="refresh-hints" onclick="getHints()" data-toggle="tooltip" title="Refresh" data-placement="top"></i></h2>
                     <hr class="star-light">
@@ -215,7 +220,14 @@ if ($userStatus != null) {
                     <hr class="star-primary" style = "border-color: #1eabcb;">
                 </div>
             </div>
-            <div class="row">   
+            <div class="row">
+            <div class="row">
+                    <div class="alert alert-warning col-md-12 col-md-offset-0" align="center">
+                        <h3>
+                        Hello Juniors! The contest is being extended by one hour. We call it the Rush Hour. Hints come in at super speed giving you the power to change the leaderboard. May the best one Win!
+                        </h3>
+                    </div>
+                </div>
                 <div class="table-responsive col-lg-12">
                     <table class="table table-hover leaderboardTable table-condensed text-center">
                         <thead>
@@ -251,7 +263,7 @@ if ($userStatus != null) {
                         <h3>Around the Web</h3>
                         <ul class="list-inline">
                             <li>
-                                <a href="https://www.facebook.com/chakravyuh2k16" class="btn-social btn-outline tool-tip" target="_blank" title="Facebook"><i class="fa fa-fw fa-facebook"></i></a>
+                                <a href="https://www.facebook.com/ducs.chakravyuh" class="btn-social btn-outline tool-tip" target="_blank" title="Facebook"><i class="fa fa-fw fa-facebook"></i></a>
                             </li>
                             <li>
                                 <a href="https://twitter.com/sankalan_ducs" class="btn-social btn-outline tool-tip" target="_blank" title="Twitter"><i class="fa fa-fw fa-twitter"></i></a>
@@ -271,7 +283,7 @@ if ($userStatus != null) {
                 <div class="row">
                     <div class="col-lg-12">
                         Copyright &copy; <a href="index.php">Chakravyuh</a> -
-                        <a href="http://sankalanducs.in/" target="_blank">Sankalan 2019</a>,
+                        <a href="http://ducs.in/" target="_blank">Sankalan 2019</a>,
                         <a href="http://cs.du.ac.in/" target="_blank"> DUCS</a>, University of Delhi </div>
                 </div>
             </div>

@@ -85,7 +85,7 @@ header {
     color: #fff;
     /* background: #1eabcb; */
     height: 450px;
-    background: url("/img/bg.jpg") no-repeat center center fixed;
+    background: url("./../img/bg.jpg") no-repeat center center fixed;
     background-size: contain;
 }
 

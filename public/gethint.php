@@ -10,7 +10,8 @@ if ($userStatus != null) {
 	exit($userStatus);
 }
 
-$conf = parse_ini_file('app.ini.php');
+$conf = parse_ini_file('./../app.ini.php');
+
 
 $hintsData = array();
 $id = $_SESSION['id'];

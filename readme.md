@@ -30,16 +30,28 @@ To change event's start and end date, goto [timer.php](./timer.php)
 - [x] thumbs up -> should not affect dom
 - [x] 12 attemps visible - done
 - [x] play a mini event for self test
+- [x] fix favicon.ico
 - [ ] move start and end date control to db
-- [ ] fix favicon.ico
-- [ ] UI new
-- [ ] documentation
-
+- [ ] UI colors and everything
+- [ ] documentation and instructions
+- [ ] thumbs up ki placement
+- [ ] index page is stacking old error messages. we need to remove them.
+- [ ] add developers name to page in main sankalan
+- [ ] a set of positive and negative words for each question, to show the right path.
+- [ ] test on firefox - fb login not working
+- [ ] when user puts answer in first attempt, no row is generated in userattempts. Make a row & put value "correctAns" when he enter right answer
+- [ ] test fb by loggin jayants id on fb
+- [ ] lag in user attemps ->> enter an empty array in user attempts when user reaches next level
+- [ ] winner on level x -> no of questions
+- [ ] fb app login popup
+- [ ] start end time
+- [ ] user attemps ke saath name as well
+ 
 ## Deploy time
 
 - give the admin ssh access / mysql workbench access to monitor the db live
 - FB login app live
-- deploy site to https for fb to work
+- [x] deploy site to https for fb to work
 
 ## future scope
 
@@ -51,3 +63,34 @@ To change event's start and end date, goto [timer.php](./timer.php)
 - md5 hashing is used while submitting answers.
 - DB -> answers -> store -> in md5
 - for hints base64 decode is used.
+- `app.ini.php` is used for config. It has been gitignored. use `scp` to paste it to server.
+- a sample `app.ini.php` has been provided. Make a `app.ini.php` based on it before starting.
+- also, actual `production-dump.sql` and actual `chakraData` has been put in secret & secret is gitignored. Use scp to paste data to server and import dump directly.
+
+# DB Structure
+
+## Tables
+
+- QUESTION (ID, ANSWER, DATA, TYPE)
+
+- HINT (QID, HINT#, HINT)
+
+- USER (ID, NAME, EMAIL, PICTURE_URL, BLOCKED, LEVEL#, POINTS, LEVEL_UPDATE_TIME, LEVEL_UPDATE_TIME_MICRO, LAST_HINT_TIME, NEXT_HINT#)
+
+- USERATTEMPT (UID, LEVEL, COUNT, LAST_FIVE_ATTEMPTS)
+
+- LEVELCLEAR (LEVEL#, TIME, TIME_MICRO, UID)
+
+- HINT_TIME_CONTROL
+  -$LowerLevels_fixed_distance_from_last_hint = 5
+  - $LowerLevels_added_time_factor_based_on_hint_level = 1
+  - $partition_point_is_at_level = 20
+  - $UpperLevels_fixed_distance_from_last_hint = 10
+  - $UpperLevels_added_time_factor_based_on_hint_level = 2
+
+
+## Scoring
+
+1. Top 20 - 10
+2. Next 30 - 9
+3. Rest - 8 points
