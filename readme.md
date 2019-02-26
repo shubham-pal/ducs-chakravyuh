@@ -41,7 +41,11 @@ To change event's start and end date, goto [timer.php](./timer.php)
 - [ ] test on firefox - fb login not working
 - [ ] when user puts answer in first attempt, no row is generated in userattempts. Make a row & put value "correctAns" when he enter right answer
 - [ ] test fb by loggin jayants id on fb
-- [ ] lag in user attemps
+- [ ] lag in user attemps ->> enter an empty array in user attempts when user reaches next level
+- [ ] winner on level x -> no of questions
+- [ ] fb app login popup
+- [ ] start end time
+- [ ] user attemps ke saath name as well
  
 ## Deploy time
 
@@ -78,12 +82,11 @@ To change event's start and end date, goto [timer.php](./timer.php)
 - LEVELCLEAR (LEVEL#, TIME, TIME_MICRO, UID)
 
 - HINT_TIME_CONTROL
-
-$LowerLevels_fixed_distance_from_last_hint = 5
-$LowerLevels_added_time_factor_based_on_hint_level = 1
-$partition_point_is_at_level = 20
-$UpperLevels_fixed_distance_from_last_hint = 10
-$UpperLevels_added_time_factor_based_on_hint_level = 2
+  -$LowerLevels_fixed_distance_from_last_hint = 5
+  - $LowerLevels_added_time_factor_based_on_hint_level = 1
+  - $partition_point_is_at_level = 20
+  - $UpperLevels_fixed_distance_from_last_hint = 10
+  - $UpperLevels_added_time_factor_based_on_hint_level = 2
 
 
 ## Scoring
