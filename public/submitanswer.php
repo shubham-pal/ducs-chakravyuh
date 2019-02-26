@@ -178,8 +178,50 @@ if (!$result) {
 	exit('CORRECT_ANSWER_ERROR_UPDATING');
 }
 
-// SUCCESS.
+//add Correct Answer to user attempts
+$query = sprintf("SELECT last_five_attempts FROM userattempt WHERE user_id = '%s' AND level = '%s'", $_SESSION['id'], $userLevel['level']);
+$result = mysqli_query($connection, $query);
 
+if (!$result) {
+	exit('CORRECT_ANSWER_ERROR_UPDATING');
+}
+
+$tmpCount = mysqli_num_rows($result);
+if ($tmpCount == 1) {
+	// Attempts exist.
+
+	$attemptsRow = mysqli_fetch_array($result);
+
+	$attempts = $attemptsRow['last_five_attempts'];
+	$attemptsArray = explode('||', $attempts);
+	if (count($attemptsArray) == 12) {
+		// Five attempts already present.
+
+		// Remove the 1st element.
+		array_shift($attemptsArray);
+
+		array_push($attemptsArray, '"Correct Answer"');
+
+		$attempts = implode('||', $attemptsArray);
+	} else {
+		$attempts .= '||"Correct Answer"';
+	}
+
+	$attempts = mysqli_real_escape_string($connection, htmlentities($attempts));
+
+	$query = sprintf("UPDATE userattempt SET count = count + 1, last_five_attempts = '$attempts' WHERE user_id = '%s' AND level = '%s'", $_SESSION['id'], $userLevel['level']);
+} else {
+	// First attempt.
+	$query = sprintf("INSERT INTO userattempt (user_id, level, count, last_five_attempts) VALUES ('%s', '%s', 1, '%s')", $_SESSION['id'], $userLevel['level'], "Correct Answer");
+}
+
+mysqli_query($connection, $query);
+
+// insert empty row in user attempts for next level
+// $query = sprintf("INSERT INTO userattempt (user_id, level, count, last_five_attempts) VALUES ('%s', '%s', '%s', '%s')", $_SESSION['id'], $userLevel['level'] + 1, 0, "");
+// mysqli_query($connection, $query);
+
+// SUCCESS.
 $_SESSION['level'] += 1;
 echo 1;
 

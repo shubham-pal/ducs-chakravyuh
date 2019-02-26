@@ -2,6 +2,12 @@
     CREATE DATABASE IF NOT EXISTS ducs_chakravyuh_mayajaal;
     USE ducs_chakravyuh_mayajaal;
     
+    CREATE TABLE IF NOT EXISTS `game_time_control` (
+    `id` int(11) NOT NULL,
+    `start_time` datetime NOT NULL,
+    `end_time` datetime NOT NULL,
+    PRIMARY KEY (`id`)
+    ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
     CREATE TABLE IF NOT EXISTS `hint` (
     `ques_id` int(11) NOT NULL,
@@ -60,7 +66,7 @@
     ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
     INSERT INTO `hint_time_control` (`id`, `LowerLevels_fixed_distance_from_last_hint`, `LowerLevels_added_time_factor_based_on_hint_level`, `partition_point_is_at_level`, `UpperLevels_fixed_distance_from_last_hint`, `UpperLevels_added_time_factor_based_on_hint_level`) VALUES (1, 5, 1, 20, 10, 2);
-
+    INSERT INTO `game_time_control` (`id`, `start_time`, `end_time`) VALUES (1, now(), now() + INTERVAL 1 DAY);
     
 
     TRUNCATE TABLE `hint`;

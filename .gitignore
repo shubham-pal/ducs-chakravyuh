@@ -9,3 +9,5 @@ app.ini.php
 # Dont upload test data to github
 public/chakraData/**
 
+/public/node_modules
+

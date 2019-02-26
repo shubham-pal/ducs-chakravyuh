@@ -11,8 +11,6 @@ if (!isset($_SESSION['id'])) {
 	return;
 }
 
-require 'connect.php';
-
 // Check if the user is blocked or not registered anymore.
 $query = sprintf("SELECT blocked FROM user WHERE id = '%s'", $_SESSION['id']);
 $result = mysqli_query($connection, $query);
