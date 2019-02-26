@@ -580,6 +580,14 @@ table tr:nth-child(odd) {
   }
 }
 
+/* @media (max-width: 768px) {
+  .bg-image {
+    background-image: url("/static/img/bg-mobile.png");
+    background-size: cover;
+  }
+} */
+
+
 .image svg {
   width: 300px;
   -moz-transform: scale(1.2);

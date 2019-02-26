@@ -11,3 +11,5 @@ public/chakraData/**
 
 /public/node_modules
 
+*.zip
+

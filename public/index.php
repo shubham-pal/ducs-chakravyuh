@@ -21,13 +21,15 @@ $conf = parse_ini_file('./../app.ini.php');
             <div class="content flex flex-1 flex-wrap md:flex-row lg:mt-10">
                 <div class="title-section flex-1 flex flex-col items-center px-1 sm:px-10">
                     <div class="title-header">
-                        <h1 class="title font-display text-homeTitle md:text-title text-3xl md:text-8xl relative mt-4 tracking-wide">Chakravyuh</h1>
+                        <h1 class="title font-display ml-20 -mt-5 text-homeTitle md:text-title text-3xl md:text-8xl relative mt-4 tracking-wide">Chakravyuh</h1>
                         <p class="font-sans text-center text-white md:text-nav italic mb-12 md:mb-16"><strong>Online Treasure Hunt</strong></p>
                     </div>
                 </div>
                 <div class="illustration-section flex-1 flex justify-center">
                     <div class="image hidden md:flex items-center">
-                        <?php include_once('static/svg/maze.php') ?>
+                        <?php 
+                        // include_once('static/svg/maze.php') 
+                        ?>
                     </div>
                     <div class="event-details flex flex-col items-center justify-around p-4 border-nav border-t border-b">
                         <div>
