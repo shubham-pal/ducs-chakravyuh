@@ -1,5 +1,5 @@
 <nav>
-    <div class="navigation shadow-xl flex flex-wrap md:flex-no-wrap justify-center bg-nav text-white text-bold text-lg shadow">
+    <div class="navigation shadow-xl flex flex-wrap md:flex-no-wrap justify-center bg-black text-white text-bold text-lg shadow">
         <ul class="left-nav list-reset flex-1 flex flex-wrap justify-center md:justify-end text-xl font-bold">
             <a href="#answerit"><li class="py-10 px-6 text-center hover:bg-orange hover:text-orange-darker tracking-wide">Answer it</li></a>
             <a href="#leaderboard" onclick="updateLeaderboard()"><li class="py-10 px-6 text-center hover:bg-orange hover:text-orange-darker tracking-wide">Leaderboard</li></a>

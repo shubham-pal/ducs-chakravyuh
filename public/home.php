@@ -1,4 +1,4 @@
-<?php include_once("static/_partials/header.php") ?>
+<?php include_once("../partials/header.php") ?>
 <?php
 require 'timer.php';
 
@@ -14,9 +14,9 @@ if ($userStatus != null) {
 ?>
     <title>Home | Chakravyuh</title>
 </head>
-<body class="min-h-screen flex flex-col bg-back">
+<body class="min-h-screen flex flex-col bg-black">
     <!-- navigation starts here -->
-    <?php include_once("static/_partials/nav.php")?>
+    <?php include_once("../partials/nav.php")?>
     <!-- navigation ends here -->
 
     <!-- main content starts here -->
@@ -101,10 +101,10 @@ if ($userStatus != null) {
     <!-- main content ends here -->
 
     <!-- rules -->
-    <?php include_once("static/_partials/rules.php") ?>
+    <?php include_once("../partials/rules.php") ?>
 
     <!-- footer starts here -->
-    <div class=" xl:mt-0 bg-nav">
+    <div class=" xl:mt-0 bg-black">
         <div class="flex text-center flex-col sm:flex-row">
             <div class="footer-card flex-col flex items-center">
                 <h2 class="m-5 text-homeTitle">Location</h2>
@@ -128,7 +128,7 @@ if ($userStatus != null) {
                 <p class="text-white leading-normal">Krishna : 9935590973</p>
             </div>
         </div>
-        <?php include_once("static/_partials/footer.php") ?>
+        <?php include_once("../partials/footer.php") ?>
     </div>
     <!-- footer ends here -->
 </body>
