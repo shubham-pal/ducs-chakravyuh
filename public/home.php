@@ -119,7 +119,7 @@ if ($userStatus != null) {
                 <h2 class="m-5 text-homeTitle">Around the web</h2>
                 <div class="social-links text-2xl">
                     <a href="https://www.facebook.com/ducs.chakravyuh/" class="fb hover:text-indigo-light" target="_blank"><i class="fab fa-facebook-f mx-2"></i></a>
-                    <a href="mailto:sankalan.ducs@gmail.com" class="twitter "><i class="fas fa-envelope mx-2"></i></a>
+                    <a href="mailto:sankalan2019.ducs@gmail.com" class="twitter "><i class="fas fa-envelope mx-2"></i></a>
                 </div>
             </div>
             <div class="footer-card">

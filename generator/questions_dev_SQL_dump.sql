@@ -2,6 +2,7 @@
     CREATE DATABASE IF NOT EXISTS ducs_chakravyuh_mayajaal;
     USE ducs_chakravyuh_mayajaal;
     
+
     CREATE TABLE IF NOT EXISTS `game_time_control` (
     `id` int(11) NOT NULL,
     `start_time` datetime NOT NULL,
