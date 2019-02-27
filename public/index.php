@@ -23,7 +23,7 @@ $conf = parse_ini_file('./../app.ini.php');
 <title>Chakravyuh</title>
 </head>
 
-<body class="min-h-screen flex flex-col bg-image">
+<body class="relative min-h-screen flex flex-col bg-image pb-12">
     <!-- main content starts here -->
     <main class="flex-1 flex items-center">
         <div class="content flex flex-1 flex-wrap md:flex-row lg:mt-10">

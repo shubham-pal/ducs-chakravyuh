@@ -181,8 +181,8 @@ function getHints() {
                     }
 
                     ul.append(
-                        `<li class="py-2 text-xl">
-                            <td><strong>${obj[i]}</strong></td>
+                        `<li class="mt-auto py-2 text-xl" style="color: #ff9a04;">
+                            ${obj[i]}
                         </li>`
                     );
             }
