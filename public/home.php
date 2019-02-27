@@ -28,8 +28,8 @@ if ($userStatus != null) {
 
 
         <!-- message-box -->
-        <!-- <div class="message-box bg-red h-16 flex items-center pl-4 mx-16 my-8">
-                <p class="text-white font-bold text-lg">your message comes here</p>
+        <!-- <div class="message-box bg-orange-dark h-16 flex items-center pl-4 mx-16 my-8">
+                <p class="text-white w-full font-bold text-center text-lg">your message comes here</p>
             </div> -->
 
 
