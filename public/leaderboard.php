@@ -73,7 +73,7 @@ if (mysqli_num_rows($resultCurrUser) > 0) {
 
                                   SELECT count(*)
                                   FROM user
-                                  WHERE level = 51 and level = '$currUserLevel' and 
+                                  WHERE level = 55 and level = '$currUserLevel' and 
                                         level_update_time_micro <= (SELECT level_update_time_micro
                                                                     FROM user
                                                                     WHERE id = '$id')
@@ -127,7 +127,7 @@ if (mysqli_num_rows($resultCurrUser) > 0) {
 //Get details of top 100 participants when last level cleared
 $query = "SELECT u.picture_url, u.name, u.level, u.points, (u.level_update_time_micro - l.time_micro) AS microDiff
           FROM user AS  u, levelcleartime AS l 
-          WHERE l.level = u.level - 1 and u.level = 51
+          WHERE l.level = u.level - 1 and u.level = 55
           ORDER BY level_update_time_micro ASC LIMIT 100";
 
 $result = mysqli_query($connection, $query);
