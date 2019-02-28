@@ -80,7 +80,7 @@ if ($userStatus != null) {
 
 
         <div class="leaderboard px-16 mb-16">
-            <h1 class="text-homeTitle my-5">Leaderboard<i class="fa fa-sync-alt text-white ml-4 cursor-pointer" id="refresh-leaderboard" onclick="updateLeaderboard(ttg)" data-toggle="tooltip" title="Refresh" data-placement="bottom"></i></h1>
+            <h1 class="text-homeTitle my-5">Leaderboard<i class="fa fa-sync-alt text-white ml-4 cursor-pointer" id="refresh-leaderboard" onclick="updateLeaderboard()" data-toggle="tooltip" title="Refresh" data-placement="bottom"></i></h1>
             <div id="leaderboard" class="w-full flex justify-center">
                 <table class="w-full">
                     <thead class="w-full">
@@ -131,7 +131,7 @@ if ($userStatus != null) {
                     </a>
                 </div> -->
                 <p class="text-white leading-normal">Avinash : 9555138871</p>
-                <p class="text-white leading-normal">Krishna : 9935590973</p>
+                <p class="text-white leading-normal">Sushmita : 8826391168</p>
 
             </div>
             <?php include_once("../partials/footer.php") ?>
@@ -159,6 +159,8 @@ if ($userStatus != null) {
             modal.classList.remove('flex');
         }
     });
+    console.log('%cStop! You are not as smart as you think', 'color: red; font-size: 30px; font-weight: bold;');
+
 </script>
 
 </html> 

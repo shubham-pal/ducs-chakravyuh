@@ -120,7 +120,7 @@ function getQuestion() {
                             break;
 
                         case 'image':
-                            console.log("here");
+                            // console.log("here");
                             $('#ques-image img').attr('src', quesObj['data']);
                             // $('#ques-image-enlarged').attr('src', quesObj['data']);
                             $('#ques-image').css('display', 'inline');
@@ -236,7 +236,7 @@ function updateLeaderboard() {
                         `<tr class="text-center">
                             <th>${currRankData.rank}</th>
                             <th>
-                                <div class="flex justify-center items-center">
+                                <div class="flex justify-start items-center">
                                     <img class="rounded-full" src="${currRankData.url}" alt="User picture">
                                     <span class="mx-4">${currRankData.name}</span>
                                 </div>
@@ -258,9 +258,9 @@ function updateLeaderboard() {
                             `<tr class="text-center">
                                 <td data-label="Rank py-1"> ${ranksArray[1].rank}</td>
                                 <td data-label="Player">
-                                    <div class="flex justify-center items-center">
+                                    <div class="flex justify-start items-center">
                                         <img class="rounded-full" src="${ranksArray[1].url}" alt="User picture">
-                                        < class="mx-4"><strong>${ranksArray[1].name} [WINNER]</strong></span>
+                                        <span class="mx-4"><strong>${ranksArray[1].name} [WINNER]</strong></span>
                                     </div>
                                 </td>
                                 <td data-label="Level">${ranksArray[1].level}</td>
@@ -271,9 +271,9 @@ function updateLeaderboard() {
                     } else {
                         tbody.append(
                             `<tr class="text-center">
-                                <td data-label='Rank py-1' class = 'text-center'>${ranksArray[1].rank}</td>
+                                <td data-label='Rank py-1'>${ranksArray[1].rank}</td>
                                 <td data-label='Player'>
-                                    <div class="flex justify-center items-center">
+                                    <div class="flex justify-start items-center">
                                         <img class="rounded-full" src="${ranksArray[1].url}" alt="User picture">
                                         <span class="mx-4">${ranksArray[1].name}</span>
                                     </div>
@@ -288,7 +288,20 @@ function updateLeaderboard() {
 
                     // Time to update the remaining leaderboard.
                     for (var i = 2; i < ranksArray.length; i++) {
-                        tbody.append("<tr><td data-label='Rank' class = 'text-center'>" + ranksArray[i].rank + "</td><td data-label='Player'>" + '<img src="' + ranksArray[i].url + '" alt="User picture"></td><td>  ' + ranksArray[i].name + "</td><td data-label='Level'>" + ranksArray[i].level + "</td><td data-label='Points'>" + ranksArray[i].points + "</td><td data-label='Split Time'><i class='fa fa-plus'></i>  " + ranksArray[i].splitTime + '</td></tr>');
+                        tbody.append(
+                            `<tr class="text-center">
+                                <td data-label='Rank py-1'>${ranksArray[i].rank}</td>
+                                <td data-label='Player'>
+                                    <div class="flex justify-start items-center">
+                                        <img class="rounded-full" src="${ranksArray[i].url}" alt="User picture">
+                                        <span class="mx-4">${ranksArray[i].name}</span>
+                                    </div>
+                                </td>
+                                <td data-label='Level'>${ranksArray[i].level}</td>
+                                <td data-label='Points'>${ranksArray[i].points}</td>
+                                <td data-label='Split Time'><i class='fa fa-plus'></i> ${ranksArray[i].splitTime}</td>
+                            </tr>`
+                        );
                     }
             }
 

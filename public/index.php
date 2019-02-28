@@ -73,7 +73,6 @@ $conf = parse_ini_file('./../app.ini.php');
                     </div>
                     <div class="social-links text-2xl mt-6">
                         <a href="https://www.facebook.com/ducs.chakravyuh/" class="fb hover:text-indigo-light" target="_blank"><i class="fab text-3xl fa-facebook-f mx-2"></i></a>
-                        <a href="mailto:sankalan.ducs@gmail.com" class="twitter "><i class="fas text-3xl fa-envelope mx-2"></i></a>
                     </div>
                     <div class="links mt-4 mb-4 md:mb-4 text-lg font-bold">
                         <a id="rules" href="#" class="mx-4 text-homeTitle md:text-title underline">RULES</a>
