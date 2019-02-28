@@ -50,7 +50,7 @@ if (!$result) {
 
 $userLevel = mysqli_fetch_array($result);
 
-if ($userLevel['level'] > 50) {
+if ($userLevel['level'] > 55) {
 	exit('ERROR_SUBMITTING_ANSWER');
 }
 
@@ -161,7 +161,7 @@ if ($userLevel['level'] >= 20) {
 	if ($count['count'] < 20) {
 		// first 20 people get 10 points
 		$points = 10;
-	} else if ($count['count'] < 50) {
+	} else if ($count['count'] < 55) {
 		// next 30 get 9 points
 		$points = 9;
 	} else {
