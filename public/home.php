@@ -28,9 +28,9 @@ if ($userStatus != null) {
 
 
         <!-- message-box -->
-        <div class="message-box bg-orange-dark h-16 flex items-center pl-4 mx-16 my-8">
+        <!-- <div class="message-box bg-orange-dark h-16 flex items-center pl-4 mx-16 my-8">
                 <p class="text-white w-full font-bold text-center text-lg">Naacho</p>
-            </div>
+            </div> -->
 
 
         <div id="answerit" class="question-section flex mt-8 mb-4 sm:mb-10 flex-col md:flex-row">
