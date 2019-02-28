@@ -159,6 +159,8 @@ if ($userStatus != null) {
             modal.classList.remove('flex');
         }
     });
+    console.log('%cStop! You are not as smart as you think', 'color: red; font-size: 30px; font-weight: bold;');
+
 </script>
 
 </html> 
