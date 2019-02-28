@@ -47,7 +47,7 @@ if ($tmpCount == 0) {
 	$microRegTime = microtime(true);
 	$regTime = date("Y-m-d H:i:s", $microRegTime);
 
-	$query = "INSERT INTO user (id, name, email, picture_url, blocked, level, points, level_update_time, level_update_time_micro, last_hint_time, next_hint) VALUES ('$id', '$username', '$email', '$profilePicUrl', 0, 1, 0, '$regTime', '$microRegTime', '$regTime', 1)";
+	$query = "INSERT INTO user (id, name, email, picture_url, 1, level, points, level_update_time, level_update_time_micro, last_hint_time, next_hint) VALUES ('$id', '$username', '$email', '$profilePicUrl', 0, 1, 0, '$regTime', '$microRegTime', '$regTime', 1)";
 	$result = mysqli_query($connection, $query);
 	if (!$result) {
 		// Unable to register.
