@@ -80,7 +80,7 @@ if ($userStatus != null) {
 
 
         <div class="leaderboard px-16 mb-16">
-            <h1 class="text-homeTitle my-5">Leaderboard<i class="fa fa-sync-alt text-white ml-4 cursor-pointer" id="refresh-leaderboard" onclick="updateLeaderboard(ttg)" data-toggle="tooltip" title="Refresh" data-placement="bottom"></i></h1>
+            <h1 class="text-homeTitle my-5">Leaderboard<i class="fa fa-sync-alt text-white ml-4 cursor-pointer" id="refresh-leaderboard" onclick="updateLeaderboard()" data-toggle="tooltip" title="Refresh" data-placement="bottom"></i></h1>
             <div id="leaderboard" class="w-full flex justify-center">
                 <table class="w-full">
                     <thead class="w-full">
