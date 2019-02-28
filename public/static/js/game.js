@@ -120,7 +120,7 @@ function getQuestion() {
                             break;
 
                         case 'image':
-                            console.log("here");
+                            // console.log("here");
                             $('#ques-image img').attr('src', quesObj['data']);
                             // $('#ques-image-enlarged').attr('src', quesObj['data']);
                             $('#ques-image').css('display', 'inline');
