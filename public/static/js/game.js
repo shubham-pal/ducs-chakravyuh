@@ -68,6 +68,8 @@ function submitAnswer() {
 function clearQuestionArea() {
     $('#level-number').text('');
     $('#ques-image').css('display', 'none');
+    $('#ques-audio').css('display', 'none');
+    $('#ques-video').css('display', 'none');
 }
 
 function getQuestion() {
