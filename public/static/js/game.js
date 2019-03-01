@@ -255,7 +255,7 @@ function updateLeaderboard() {
                     var tbody = $('#leaderboard table > tbody');
 
                     // Set current 1st rank user.
-                    if (ranksArray[1].level > 50) {
+                    if (ranksArray[1].level > 60) {
                         tbody.append(
                             `<tr class="text-center">
                                 <td data-label="Rank py-1"> ${ranksArray[1].rank}</td>
